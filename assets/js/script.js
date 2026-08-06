@@ -80,15 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- JotForm fallback visibility ---------- */
-  const jotformFrame = document.getElementById('jotformFrame');
-  const formFallback = document.getElementById('formFallback');
-  if (jotformFrame && formFallback) {
-    let loaded = false;
-    jotformFrame.addEventListener('load', () => { loaded = true; });
-    setTimeout(() => {
-      if (!loaded) formFallback.style.display = 'block';
-    }, 4000);
-  }
-
 });
