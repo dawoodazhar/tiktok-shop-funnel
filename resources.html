@@ -15,9 +15,10 @@
 <body>
 
 <header class="topbar">
-  <div class="logo"><img src="assets/img/logo-icon.png" alt="Anologe"> anologe<span>.</span></div>
+  <a class="logo" href="index.html"><img src="assets/img/logo-icon.png" alt="Anologe"> anologe<span>.</span></a>
   <nav aria-label="Primary">
     <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="index.html#why">Why Us</a></li>
       <li><a href="index.html#reviews">Reviews</a></li>
       <li><a href="index.html#portfolio">Case Studies</a></li>
@@ -34,6 +35,7 @@
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-link">Home</a>
   <a href="index.html#why" class="mobile-link">Why Us</a>
   <a href="index.html#reviews" class="mobile-link">Reviews</a>
   <a href="index.html#portfolio" class="mobile-link">Case Studies</a>
@@ -51,7 +53,7 @@
     <h2>How TikTok Shop GMV Max Ads Work</h2>
     <p>GMV Max is TikTok's automated ad campaign type built specifically for TikTok Shop sellers. Instead of optimizing toward clicks, views, or reach like a standard TikTok ad campaign, GMV Max optimizes directly for Gross Merchandise Value (GMV): the total sales value it can generate from a shop's product catalog within a given budget.</p>
     <p>A GMV Max campaign pulls creative from two sources: paid ad creative uploaded by the seller, and organic shoppable content that's already performing well on the shop's TikTok account. TikTok's algorithm then tests combinations of creative, audience, and product placement, shifting spend toward whatever is converting best in near real time.</p>
-    <p>Because GMV Max is fully automated on the targeting and bidding side, campaign performance depends heavily on two things outside the algorithm's control: clean pixel and catalog data (so the algorithm knows what "a sale" actually looks like), and a steady supply of new shoppable content to test. In one Anologe-managed account, a GMV Max campaign returned 9.35&times; ROI on $1,213 of ad spend over seven days &mdash; a result driven largely by having accurate pixel events already in place before the campaign launched.</p>
+    <p>Because GMV Max is fully automated on the targeting and bidding side, campaign performance depends heavily on two things outside the algorithm's control: clean pixel and catalog data (so the algorithm knows what "a sale" actually looks like), and a steady supply of new shoppable content to test. In one Anologe-managed account, a GMV Max campaign returned 9.35&times; ROI on $1,213 of ad spend over seven days, a result driven largely by having accurate pixel events already in place before the campaign launched.</p>
     <p>For platform-level specifics, see <a href="https://ads.tiktok.com/help/article/gmv-max" target="_blank" rel="noopener">TikTok's official GMV Max documentation</a>.</p>
   </article>
 
@@ -59,17 +61,17 @@
     <h2>TikTok Pixel Setup Guide</h2>
     <p>The TikTok Pixel is a snippet of code installed on a storefront that reports visitor actions back to TikTok Ads Manager. Without it, TikTok's ad algorithms have no reliable signal for who is actually converting, which means campaigns end up optimizing for traffic instead of sales.</p>
     <p>For an e-commerce store, the events that matter most are: <strong>ViewContent</strong> (a product page view), <strong>AddToCart</strong>, <strong>InitiateCheckout</strong>, <strong>CompletePayment</strong>, and <strong>Purchase</strong>. Each of these needs to fire at the correct point in the customer journey and pass through matching product and value data.</p>
-    <p>Once installed, every event should be verified individually in TikTok's Event Manager before a campaign goes live. A pixel that appears "installed" but fires events inconsistently, or with mismatched values, will quietly cap how well any ad campaign built on top of it can perform &mdash; this is why pixel setup is treated as its own deliverable rather than an assumed first step.</p>
+    <p>Once installed, every event should be verified individually in TikTok's Event Manager before a campaign goes live. A pixel that appears "installed" but fires events inconsistently, or with mismatched values, will quietly cap how well any ad campaign built on top of it can perform. This is why pixel setup is treated as its own deliverable rather than an assumed first step.</p>
   </article>
 
   <article id="tiktok-vs-ecommerce" style="margin-top:48px;">
     <h2>TikTok Shop vs. Traditional E-commerce</h2>
-    <p>The core difference between TikTok Shop and a standalone online store is where discovery happens. A traditional store relies on the customer already knowing what they want (search, ads driving to a site, email, direct visits). TikTok Shop sells inside the same feed where the discovery is happening &mdash; a customer can go from seeing a product in a video to completing checkout without ever leaving the app.</p>
-    <p>This changes what "good content" means. A traditional e-commerce ad usually sells the product directly. A TikTok Shop video usually needs to work as native, entertaining content first, with the product integrated naturally &mdash; content that reads as an ad tends to underperform regardless of ad spend behind it.</p>
+    <p>The core difference between TikTok Shop and a standalone online store is where discovery happens. A traditional store relies on the customer already knowing what they want (search, ads driving to a site, email, direct visits). TikTok Shop sells inside the same feed where the discovery is happening, so a customer can go from seeing a product in a video to completing checkout without ever leaving the app.</p>
+    <p>This changes what "good content" means. A traditional e-commerce ad usually sells the product directly. A TikTok Shop video usually needs to work as native, entertaining content first, with the product integrated naturally, since content that reads as an ad tends to underperform regardless of ad spend behind it.</p>
     <p>Checkout also differs meaningfully: TikTok Shop's in-app checkout removes friction (no redirect to an external site), which tends to lift conversion rate compared to a standard e-commerce funnel, but it also means sellers have less control over the post-purchase experience and rely more heavily on TikTok's own fulfillment and return workflows depending on the shop's setup.</p>
   </article>
 
-  <p class="citation-note" style="margin-top:40px;">Sources: <a href="https://ads.tiktok.com/help/article/gmv-max" target="_blank" rel="noopener">TikTok Ads Help &mdash; GMV Max</a>, <a href="https://seller-us.tiktok.com/university" target="_blank" rel="noopener">TikTok Shop Seller Academy</a>.</p>
+  <p class="citation-note" style="margin-top:40px;">Sources: <a href="https://ads.tiktok.com/help/article/gmv-max" target="_blank" rel="noopener">TikTok Ads Help: GMV Max</a>, <a href="https://seller-us.tiktok.com/university" target="_blank" rel="noopener">TikTok Shop Seller Academy</a>.</p>
 </section>
 
 <footer>
