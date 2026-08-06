@@ -20,7 +20,7 @@
 
 <!-- ============ TOP BAR ============ -->
 <header class="topbar">
-  <div class="logo">analoge<span>.</span></div>
+  <div class="logo"><img src="assets/img/logo-icon.png" alt="Analoge"> analoge<span>.</span></div>
   <a href="#audit" class="btn btn-ghost">Book Free Audit</a>
 </header>
 
@@ -28,11 +28,9 @@
 <nav class="side-rail" aria-label="Section navigation">
   <button data-target="hero" class="active" aria-label="Hero"></button>
   <button data-target="stats" aria-label="Results"></button>
-  <button data-target="video" aria-label="How it works"></button>
   <button data-target="why" aria-label="Why us"></button>
   <button data-target="reviews" aria-label="Reviews"></button>
   <button data-target="portfolio" aria-label="Portfolio"></button>
-  <button data-target="proof" aria-label="Proof"></button>
   <button data-target="audit" aria-label="Book audit"></button>
 </nav>
 
@@ -88,34 +86,8 @@
 
 <div class="wrap"><div class="divider"></div></div>
 
-<!-- ============ VIDEO ============ -->
-<section id="video">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">How It Works</span>
-      <h2>See How We Drive TikTok Shop Sales</h2>
-      <p>Shop setup, pixel &amp; event tracking, content strategy, and GMV Max ad management: this is the exact process behind the $398K and $42K results above.</p>
-    </div>
-
-    <!--
-      SWAP THE VIDEO:
-      Replace data-video below with a YouTube embed URL (…/embed/VIDEO_ID) or a
-      direct .mp4 link. Clicking the poster swaps it in automatically.
-    -->
-    <div class="video-frame reveal" id="videoFrame" data-video="">
-      <img src="assets/img/case-42k-gmv.jpg" alt="Watch how Analoge drives TikTok Shop sales" loading="lazy">
-      <button class="play-btn" aria-label="Play video" id="playBtn">
-        <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-    </div>
-    <p class="video-caption">A quick walkthrough of the setup → content → ads → scale process we run on every account.</p>
-  </div>
-</section>
-
-<div class="wrap"><div class="divider"></div></div>
-
 <!-- ============ WHY US ============ -->
-<section id="why">
+<section id="why" class="section-alt">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Why Analoge</span>
@@ -125,8 +97,8 @@
     <div class="why-grid reveal">
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M2 12h20"/></svg></div>
-        <h3>End-to-end, not one piece</h3>
-        <p>Pixel &amp; event setup, shop tab optimization, content strategy, and GMV Max ad management, all handled by one person, not handed between departments.</p>
+        <h3>End-to-end, under one roof</h3>
+        <p>Pixel &amp; event setup, shop tab optimization, content strategy, and GMV Max ad management, run by one small, focused team instead of being handed between agency departments.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg></div>
@@ -141,7 +113,7 @@
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v12H7l-3 3z"/></svg></div>
         <h3>Direct access, clear communication</h3>
-        <p>You work directly with the person running your campaigns: quick responses, clear updates, no account-manager layers in between.</p>
+        <p>You work directly with the strategist planning your account, not a rotating account manager. Execution support handles the day-to-day production behind the scenes.</p>
       </div>
     </div>
   </div>
@@ -157,20 +129,49 @@
       <h2>What Clients Say, Straight From Upwork</h2>
     </div>
     <div class="reviews-grid reveal">
+
       <div class="review-card">
-        <img src="assets/img/review-1-shop-setup.png" alt="5.0 star review for TikTok Shop setup: 'Ultimate professional, quick delivery.'" loading="lazy">
+        <div class="review-top">
+          <span class="review-title">TikTok Shop Setup</span>
+          <span class="review-stars">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+            5.0
+          </span>
+        </div>
+        <div class="review-date">Apr 2, 2026 – Apr 3, 2026</div>
+        <p class="review-quote">&ldquo;Ultimate professional, quick delivery.&rdquo;</p>
+        <div class="review-tags">
+          <span>Reliable</span>
+          <span>Professional</span>
+        </div>
       </div>
+
       <div class="review-card">
-        <img src="assets/img/review-2-ad-campaign.png" alt="5.0 star review for TikTok Ad Campaign set up: 'Very knowledgeable professional with quick responses and clear communications.'" loading="lazy">
+        <div class="review-top">
+          <span class="review-title">TikTok Ad Campaign Set Up</span>
+          <span class="review-stars">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+            5.0
+          </span>
+        </div>
+        <div class="review-date">Mar 19, 2026 – Mar 22, 2026</div>
+        <p class="review-quote">&ldquo;Very knowledgeable professional with quick responses and clear communications.&rdquo;</p>
+        <div class="review-tags">
+          <span>Committed to Quality</span>
+          <span>Clear Communicator</span>
+          <span>Detail Oriented</span>
+          <span>Professional</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <div class="wrap"><div class="divider"></div></div>
 
-<!-- ============ PORTFOLIO ============ -->
-<section id="portfolio">
+<!-- ============ PORTFOLIO (case studies + dashboard proof, one section) ============ -->
+<section id="portfolio" class="section-alt">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Case Studies</span>
@@ -181,7 +182,10 @@
     <div class="portfolio-grid reveal">
 
       <div class="case-card">
-        <div class="case-thumb"><img src="assets/img/case-pixel-setup.jpg" alt="TikTok Pixel setup case study thumbnail" loading="lazy"></div>
+        <div class="case-thumb">
+          <img src="assets/img/case-pixel-setup.jpg" alt="TikTok Pixel setup case study thumbnail" loading="lazy">
+          <img src="assets/img/logo-icon.png" alt="" class="case-badge">
+        </div>
         <div class="case-body">
           <h3>TikTok Pixel Setup &amp; Custom Event Tracking</h3>
           <ul>
@@ -191,15 +195,15 @@
             <li>Confirmed clean data flow into TikTok Ads Manager</li>
           </ul>
           <p>Clean pixel setup is the foundation of any profitable TikTok ad campaign. Without it, the algorithm can't optimize.</p>
-          <a class="case-link" href="https://www.upwork.com/freelancers/~01b58c433b5f851c27?p=2039261197532266496" target="_blank" rel="noopener">
-            View case on Upwork
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
+          <div class="case-result">Foundation for every campaign that follows</div>
         </div>
       </div>
 
       <div class="case-card">
-        <div class="case-thumb"><img src="assets/img/case-398k-gmv.jpg" alt="$398K GMV in 30 days case study thumbnail" loading="lazy"></div>
+        <div class="case-thumb">
+          <img src="assets/img/case-398k-gmv.jpg" alt="$398K GMV in 30 days case study thumbnail" loading="lazy">
+          <img src="assets/img/logo-icon.png" alt="" class="case-badge">
+        </div>
         <div class="case-body">
           <h3>TikTok Shop Management: $398K GMV, 9,785 Orders</h3>
           <ul>
@@ -209,15 +213,15 @@
             <li>Optimized shop tab, paid marketing &amp; organic content together</li>
           </ul>
           <p>Growth driven by a shoppable video strategy and product discoverability improvements across all three sales channels.</p>
-          <a class="case-link" href="https://www.upwork.com/freelancers/~01b58c433b5f851c27?p=2039252236564504576" target="_blank" rel="noopener">
-            View case on Upwork
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
+          <div class="case-result">$398,812 GMV · 9,785 orders</div>
         </div>
       </div>
 
       <div class="case-card">
-        <div class="case-thumb"><img src="assets/img/case-42k-gmv.jpg" alt="$42K GMV, 9.35x ROI case study thumbnail" loading="lazy"></div>
+        <div class="case-thumb">
+          <img src="assets/img/case-42k-gmv.jpg" alt="$42K GMV, 9.35x ROI case study thumbnail" loading="lazy">
+          <img src="assets/img/logo-icon.png" alt="" class="case-badge">
+        </div>
         <div class="case-body">
           <h3>TikTok Shop Growth: $42K GMV, 9.35× Ad ROI</h3>
           <ul>
@@ -227,27 +231,14 @@
             <li>$4.97 cost per order</li>
           </ul>
           <p>Went from minimal activity to consistent daily sales within the first week: full-service setup, ads, and scaling.</p>
-          <a class="case-link" href="https://www.upwork.com/freelancers/~01b58c433b5f851c27?p=2039251313216323584" target="_blank" rel="noopener">
-            View case on Upwork
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-          </a>
+          <div class="case-result">9.35× ROI · $4.97 cost per order</div>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
 
-<div class="wrap"><div class="divider"></div></div>
-
-<!-- ============ SCREENSHOT PROOF ============ -->
-<section id="proof">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">The Receipts</span>
-      <h2>Straight From the Dashboard</h2>
-      <p>No polished slides here, just actual TikTok Shop Seller Center and Ads Manager screenshots.</p>
-    </div>
+    <div class="sub-heading">Straight From the Dashboard</div>
+    <p style="color:var(--text-muted); font-size:15px; margin-bottom:24px; max-width:560px;">No polished slides here, just actual TikTok Shop Seller Center and Ads Manager screenshots behind the cases above.</p>
 
     <div class="proof-grid reveal">
       <div class="proof-card">
