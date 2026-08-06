@@ -1,5 +1,5 @@
 // ============================================================
-// Analoge — TikTok Shop funnel interactions
+// Anologe — TikTok Shop funnel interactions
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -59,6 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0 });
     ctaObserver.observe(heroSection);
+  }
+
+  /* ---------- Mobile hamburger menu ---------- */
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburgerBtn && mobileMenu) {
+    const closeMenu = () => {
+      hamburgerBtn.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+    };
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
   }
 
   /* ---------- JotForm fallback visibility ---------- */
