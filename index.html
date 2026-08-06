@@ -129,7 +129,7 @@
 
 <!-- ============ TOP BAR ============ -->
 <header class="topbar">
-  <div class="logo"><img src="assets/img/logo-icon.png" alt="Anologe"> anologe<span>.</span></div>
+  <a class="logo" href="index.html"><img src="assets/img/logo-icon.png" alt="Anologe"> anologe<span>.</span></a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
@@ -267,7 +267,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Client Feedback</span>
-      <h2>What Clients Say, Straight From Upwork</h2>
+      <h2>What Clients Say</h2>
     </div>
     <div class="reviews-grid reveal">
 
@@ -453,7 +453,7 @@
       <div>
         <h3>Dawood Azhar</h3>
         <span class="founder-role">Founder, Anologe &middot; TikTok Shop &amp; Performance Marketing Specialist</span>
-        <p>Dawood plans the strategy behind every account at Anologe: pixel setup, GMV Max campaign structure, and content direction. He's a Master's student in High Integrity Systems at Frankfurt University of Applied Sciences and has run performance marketing and TikTok Shop campaigns for e-commerce clients since 2024.</p>
+        <p>Dawood plans the strategy behind every account at Anologe: pixel setup, GMV Max campaign structure, and content direction. He has run performance marketing and TikTok Shop campaigns for e-commerce clients since 2024.</p>
         <p>A small execution team supports day-to-day production work (content edits, reporting, campaign monitoring), but the strategy and client relationship stay with Dawood directly.</p>
         <a href="about.html" class="case-result" style="display:inline-block; margin-top:6px;">Read the full story on the About page →</a>
       </div>
@@ -502,17 +502,51 @@
         <p>Answer a few quick questions. If it's a fit, you'll pick a call time instantly on the next page.</p>
       </div>
 
-      <!-- JotForm embed: TikTok Shop Growth Audit form, redirects to thank-you.html on submit -->
-      <iframe
-        id="jotformFrame"
-        class="jotform-embed"
-        title="TikTok Shop Growth Audit form"
-        src="https://form.jotform.com/262173737502052"
-        loading="lazy">
-      </iframe>
-      <div class="form-fallback" id="formFallback">
-        Form is loading&hellip; if it doesn't appear after a few seconds, <a href="https://form.jotform.com/262173737502052" target="_blank" rel="noopener" style="color:var(--cyan);font-weight:600;">open it in a new tab</a>.
-      </div>
+      <form class="native-form" action="https://formsubmit.co/info@anologe.com" method="POST">
+        <input type="hidden" name="_subject" value="New TikTok Shop Growth Audit Lead">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.anologe.com/thank-you.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="Name" required>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="Email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-phone">Phone Number</label>
+          <input type="tel" id="f-phone" name="Phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="f-budget">Do you currently have a budget allocated for TikTok Shop growth/ads?</label>
+          <textarea id="f-budget" name="Budget" rows="2" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="f-authority">Are you the person who makes the final decision on this, or will someone else be involved?</label>
+          <textarea id="f-authority" name="Decision maker" rows="2" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="f-need">What's your biggest challenge with TikTok Shop right now?</label>
+          <textarea id="f-need" name="Biggest challenge" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="f-timeline">When are you looking to get started?</label>
+          <textarea id="f-timeline" name="Timeline" rows="2" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">Book My Free Audit</button>
+      </form>
     </div>
   </div>
 </section>
