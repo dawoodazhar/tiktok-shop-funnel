@@ -61,21 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ctaObserver.observe(heroSection);
   }
 
-  /* ---------- Video play swap ---------- */
-  const videoFrame = document.getElementById('videoFrame');
-  const playBtn = document.getElementById('playBtn');
-  if (videoFrame && playBtn) {
-    playBtn.addEventListener('click', () => {
-      const videoUrl = videoFrame.dataset.video;
-      if (!videoUrl) {
-        // No video wired up yet — let the freelancer know instead of failing silently.
-        alert('Add your video URL to the data-video attribute on #videoFrame in index.html to enable playback.');
-        return;
-      }
-      videoFrame.innerHTML = `<iframe src="${videoUrl}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
-    });
-  }
-
   /* ---------- JotForm fallback visibility ---------- */
   const jotformFrame = document.getElementById('jotformFrame');
   const formFallback = document.getElementById('formFallback');
