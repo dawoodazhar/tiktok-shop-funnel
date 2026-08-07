@@ -84,9 +84,44 @@
         "@type": "Answer",
         "text": "Ja. Anologe betreut E-Commerce-Marken in Deutschland, den USA und dem Vereinigten Königreich. Die Kommunikation kann auf Deutsch oder Englisch erfolgen, je nach Vorliebe des Kunden."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie unterscheidet sich TikTok Shop zwischen Deutschland, den USA und UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Grundmechanik von TikTok Shop ist in allen Märkten gleich, aber Katalogpflichten, Auszahlungswährung, Versandlogistik und Content-Stil unterscheiden sich je nach Region. Ein Shop, der nach Deutschland verkauft, benötigt in der Regel deutschsprachige Listings und MwSt.-konforme Rechnungen, während US- und UK-Shops stärker auf schnelle Lieferzeiten und Creator-Content setzen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert bei einem kostenlosen TikTok Shop Wachstumsaudit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Wachstumsaudit prüft Pixel- und Event-Tracking, Produktkatalog und Listing-Qualität, bisherige Ad-Performance und Content-Output und endet mit einer kurzen Liste der wirkungsvollsten Maßnahmen sowie einer groben Kosten- und Zeitschätzung vor Beginn einer bezahlten Zusammenarbeit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Arbeitet Anologe auch mit Verkäufern in UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Anologe betreut auch TikTok Shop Verkäufer im Vereinigten Königreich, inklusive Pixel-Einrichtung für UK-Shops, GMV Max Kampagnenmanagement in GBP und Content-Strategie passend zum britischen Einkaufsverhalten."
+      }
     }
   ]
 }
+</script>
+<script>
+(function(){
+  try {
+    var isGerman = navigator.language && navigator.language.toLowerCase().indexOf('de') === 0;
+    var choice = localStorage.getItem('anologe_lang_choice');
+    if (!isGerman && choice !== 'de') {
+      window.location.replace('/');
+    }
+  } catch(e) {}
+})();
 </script>
 </head>
 <body>
@@ -99,7 +134,7 @@
       <li><a href="#hero">Start</a></li>
       <li><a href="#why">Warum wir</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="index.html">English</a></li>
+      <li><a href="index.html" onclick="try{localStorage.setItem('anologe_lang_choice','en')}catch(e){}">English</a></li>
     </ul>
   </nav>
   <div class="topbar-right">
@@ -114,7 +149,7 @@
   <a href="#hero" class="mobile-link">Start</a>
   <a href="#why" class="mobile-link">Warum wir</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="index.html" class="mobile-link">English</a>
+  <a href="index.html" class="mobile-link" onclick="try{localStorage.setItem('anologe_lang_choice','en')}catch(e){}">English</a>
   <a href="#audit" class="btn btn-primary mobile-link">Kostenloses Audit</a>
 </div>
 
@@ -308,7 +343,7 @@
       <ul class="footer-links">
         <li><a href="#why">Warum wir</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="index.html">English Version</a></li>
+        <li><a href="index.html" onclick="try{localStorage.setItem('anologe_lang_choice','en')}catch(e){}">English Version</a></li>
       </ul>
       <ul class="footer-links">
         <li><a href="privacy.html">Datenschutz</a></li>
