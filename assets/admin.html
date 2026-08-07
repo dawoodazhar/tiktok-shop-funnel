@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Anologe — Content Dashboard</title>
+<style>
+  :root{
+    --bg:#0b0f14; --card:#131a22; --border:#232d38; --text:#e8edf2; --muted:#8a97a6;
+    --accent:#25f4ee; --accent2:#ff3b7f; --ok:#2ecc71; --err:#ff5c5c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,'Inter',Segoe UI,sans-serif;
+    padding:32px 20px 100px;
+  }
+  .wrap{ max-width:840px; margin:0 auto; }
+  h1{ font-size:26px; margin:0 0 6px; }
+  .sub{ color:var(--muted); margin:0 0 28px; font-size:14px; }
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:22px; margin-bottom:20px;
+  }
+  .card h2{ font-size:16px; margin:0 0 4px; }
+  .card .file-tag{
+    display:inline-block; font-size:11px; color:var(--accent); background:rgba(37,244,238,0.08);
+    border:1px solid rgba(37,244,238,0.25); padding:2px 8px; border-radius:999px; margin-bottom:14px;
+  }
+  label{ display:block; font-size:13px; color:var(--muted); margin:14px 0 6px; }
+  textarea, input[type=text], input[type=password]{
+    width:100%; background:#0d1218; border:1px solid var(--border); border-radius:8px;
+    color:var(--text); padding:10px 12px; font-family:inherit; font-size:14px; resize:vertical;
+  }
+  textarea{ min-height:70px; line-height:1.5; }
+  .field{ margin-bottom:6px; }
+  .row{ display:flex; gap:10px; align-items:center; margin-top:14px; flex-wrap:wrap; }
+  button{
+    background:var(--accent); color:#04211f; border:none; border-radius:8px;
+    padding:10px 18px; font-weight:600; font-size:14px; cursor:pointer;
+  }
+  button.secondary{ background:transparent; color:var(--text); border:1px solid var(--border); }
+  button:disabled{ opacity:0.5; cursor:not-allowed; }
+  .status{ font-size:13px; margin-top:10px; }
+  .status.ok{ color:var(--ok); }
+  .status.err{ color:var(--err); }
+  .status.pending{ color:var(--muted); }
+  .gate{
+    max-width:420px; margin:80px auto; background:var(--card); border:1px solid var(--border);
+    border-radius:14px; padding:28px; text-align:center;
+  }
+  .gate p{ color:var(--muted); font-size:13.5px; line-height:1.6; }
+  a.pat-link{ color:var(--accent); }
+  .top-actions{ display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+  .top-actions button{ font-size:12px; padding:6px 12px; }
+  .hidden{ display:none !important; }
+  #savedIndicator{ display:none; font-size:11px; color:var(--ok); margin-left:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Token gate -->
+  <div class="gate" id="gate">
+    <h1 style="font-size:20px;">Content Dashboard</h1>
+    <p>Paste a GitHub Personal Access Token to edit your site's text directly. It's stored only in this browser's local storage and used only to talk to GitHub — never sent anywhere else.</p>
+    <input type="password" id="patInput" placeholder="github_pat_..." style="margin-bottom:12px;">
+    <button onclick="saveToken()">Connect</button>
+    <p style="margin-top:18px;">
+      Need a token? <a class="pat-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Create one here</a> —
+      scope it to <strong>Only this repository</strong> (tiktok-shop-funnel) with <strong>Contents: Read and write</strong>.
+    </p>
+  </div>
+
+  <!-- Main dashboard -->
+  <div id="dashboard" class="hidden">
+    <div class="top-actions">
+      <div>
+        <h1>Anologe Content Dashboard</h1>
+        <p class="sub">Edit your live site's text. Saving here pushes straight to GitHub and redeploys automatically in about a minute.</p>
+      </div>
+      <button class="secondary" onclick="disconnect()">Disconnect</button>
+    </div>
+    <div id="sections"></div>
+  </div>
+
+</div>
+
+<script>
+const REPO = "dawoodazhar/tiktok-shop-funnel";
+const BRANCH = "main";
+const API = "https://api.github.com";
+
+// Files and the editable sections inside each, matching the HTML comment markers
+const FILES = {
+  "index.html": {
+    label: "Homepage (English)",
+    fields: [
+      { key: "HERO_EYEBROW", name: "Hero eyebrow tag" },
+      { key: "HERO_TITLE", name: "Hero headline" },
+      { key: "HERO_SUBTITLE", name: "Hero subtitle" },
+      { key: "PROOF_SENTENCE", name: "Proof stats sentence" },
+      { key: "FAQ_1", name: "FAQ 1" },
+      { key: "FAQ_2", name: "FAQ 2" },
+      { key: "FAQ_3", name: "FAQ 3" },
+      { key: "FAQ_4", name: "FAQ 4" },
+      { key: "FAQ_5", name: "FAQ 5" },
+      { key: "FAQ_6", name: "FAQ 6" },
+      { key: "FAQ_7", name: "FAQ 7" },
+      { key: "FAQ_8", name: "FAQ 8" }
+    ]
+  },
+  "de.html": {
+    label: "Homepage (Deutsch)",
+    fields: [
+      { key: "DE_HERO_EYEBROW", name: "Hero eyebrow (DE)" },
+      { key: "DE_HERO_TITLE", name: "Hero headline (DE)" },
+      { key: "DE_HERO_SUBTITLE", name: "Hero subtitle (DE)" },
+      { key: "DE_FAQ_1", name: "FAQ 1 (DE)" },
+      { key: "DE_FAQ_2", name: "FAQ 2 (DE)" },
+      { key: "DE_FAQ_3", name: "FAQ 3 (DE)" },
+      { key: "DE_FAQ_4", name: "FAQ 4 (DE)" }
+    ]
+  }
+};
+
+function b64EncodeUnicode(str) {
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (m, p1) => String.fromCharCode('0x' + p1)));
+}
+function b64DecodeUnicode(str) {
+  return decodeURIComponent(atob(str).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+}
+
+function getToken() { return localStorage.getItem('anologe_gh_pat'); }
+
+function saveToken() {
+  const val = document.getElementById('patInput').value.trim();
+  if (!val) return;
+  localStorage.setItem('anologe_gh_pat', val);
+  init();
+}
+
+function disconnect() {
+  localStorage.removeItem('anologe_gh_pat');
+  location.reload();
+}
+
+async function ghFetch(path, options = {}) {
+  const res = await fetch(`${API}/repos/${REPO}/contents/${path}?ref=${BRANCH}`, {
+    ...options,
+    headers: {
+      "Authorization": `Bearer ${getToken()}`,
+      "Accept": "application/vnd.github+json",
+      ...(options.headers || {})
+    }
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`GitHub API ${res.status}: ${body}`);
+  }
+  return res.json();
+}
+
+function extractSection(content, key) {
+  const re = new RegExp(`<!-- EDITABLE:${key}_START -->([\\s\\S]*?)<!-- EDITABLE:${key}_END -->`);
+  const match = content.match(re);
+  return match ? match[1].trim() : null;
+}
+
+function replaceSection(content, key, newValue) {
+  const re = new RegExp(`(<!-- EDITABLE:${key}_START -->)([\\s\\S]*?)(<!-- EDITABLE:${key}_END -->)`);
+  return content.replace(re, `$1\n${newValue}\n$3`);
+}
+
+async function loadFile(path, config) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <span class="file-tag">${path}</span>
+    <h2>${config.label}</h2>
+    <div class="fields" data-path="${path}"></div>
+    <div class="row">
+      <button data-save="${path}">Save changes for this file</button>
+      <span class="status" data-status="${path}"></span>
+    </div>
+  `;
+  document.getElementById('sections').appendChild(card);
+
+  const status = card.querySelector(`[data-status="${path}"]`);
+  status.textContent = "Loading current content...";
+  status.className = "status pending";
+
+  let fileData;
+  try {
+    fileData = await ghFetch(path);
+  } catch (e) {
+    status.textContent = "Failed to load: " + e.message;
+    status.className = "status err";
+    return;
+  }
+
+  const content = b64DecodeUnicode(fileData.content);
+  const fieldsContainer = card.querySelector('.fields');
+
+  config.fields.forEach(f => {
+    const current = extractSection(content, f.key);
+    const wrap = document.createElement('div');
+    wrap.className = 'field';
+    wrap.innerHTML = `
+      <label>${f.name}</label>
+      <textarea data-key="${f.key}" rows="3">${current !== null ? current : '⚠️ marker not found'}</textarea>
+    `;
+    fieldsContainer.appendChild(wrap);
+  });
+
+  status.textContent = "Loaded.";
+  status.className = "status ok";
+
+  card.querySelector(`[data-save="${path}"]`).addEventListener('click', async () => {
+    status.textContent = "Saving...";
+    status.className = "status pending";
+    try {
+      const latest = await ghFetch(path);
+      let updatedContent = b64DecodeUnicode(latest.content);
+      fieldsContainer.querySelectorAll('textarea').forEach(ta => {
+        updatedContent = replaceSection(updatedContent, ta.dataset.key, ta.value.trim());
+      });
+      await ghFetch(path, {
+        method: "PUT",
+        body: JSON.stringify({
+          message: `Content update via dashboard: ${path}`,
+          content: b64EncodeUnicode(updatedContent),
+          sha: latest.sha,
+          branch: BRANCH
+        })
+      });
+      status.textContent = "Saved. Live site updates in ~1 minute.";
+      status.className = "status ok";
+    } catch (e) {
+      status.textContent = "Save failed: " + e.message;
+      status.className = "status err";
+    }
+  });
+}
+
+async function init() {
+  const token = getToken();
+  if (!token) return;
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('dashboard').classList.remove('hidden');
+  document.getElementById('sections').innerHTML = '';
+  for (const [path, config] of Object.entries(FILES)) {
+    await loadFile(path, config);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
