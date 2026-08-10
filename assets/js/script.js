@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Sticky mobile CTA (show after hero) ---------- */
   const stickyCta = document.getElementById('stickyCta');
-  const heroSection = document.getElementById('hero');
+  const heroSection = document.getElementById('hero'); const waFloat = document.querySelector('.wa-float');
   if (stickyCta && heroSection) {
     const ctaObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          stickyCta.classList.remove('show');
+          stickyCta.classList.remove('show'); if (waFloat) waFloat.classList.remove('float-raised');
         } else {
-          stickyCta.classList.add('show');
+          stickyCta.classList.add('show'); if (waFloat) waFloat.classList.add('float-raised');
         }
       });
     }, { threshold: 0 });
