@@ -1,4 +1,24 @@
 User-agent: *
 Allow: /
 
+# AI answer/generative engines relevant to Anologe's GEO strategy - explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ByteDance's general AI crawler (not TikTok Shop related) - excluded
+User-agent: Bytespider
+Disallow: /
+
 Sitemap: https://www.anologe.com/sitemap.xml
