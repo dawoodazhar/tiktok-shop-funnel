@@ -713,7 +713,7 @@ section{
 }
 .wa-float svg{ width:26px; height:26px; fill:#fff; }
 @media (max-width:719px){
-  .wa-float{ bottom:84px; opacity:0; pointer-events:none; transition:opacity .25s ease; } .wa-float.wa-visible{ opacity:1; pointer-events:auto; }
+  .wa-float{ bottom:20px; } .wa-float.float-raised{ bottom:84px; }
 }
 
 /* ============================================================
