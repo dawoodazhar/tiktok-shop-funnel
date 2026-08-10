@@ -80,4 +80,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+      /* ---------- Cookie consent banner (GDPR) ---------- */
+      const CONSENT_KEY = 'anologe_cookie_consent';
+      const consentBanner = document.getElementById('cookieConsent');
+      const consentAccept = document.getElementById('cookieAccept');
+      const consentReject = document.getElementById('cookieReject');
+
+      function updateAnalyticsConsent(granted) {
+              if (typeof gtag === 'function') {
+                        gtag('consent', 'update', {
+                                    'ad_storage': granted ? 'granted' : 'denied',
+                                    'analytics_storage': granted ? 'granted' : 'denied'
+                        });
+              }
+      }
+
+      if (consentBanner) {
+              const savedConsent = localStorage.getItem(CONSENT_KEY);
+              if (savedConsent === 'granted') {
+                        updateAnalyticsConsent(true);
+              } else if (savedConsent === 'denied') {
+                        updateAnalyticsConsent(false);
+              } else {
+                        consentBanner.classList.add('show');
+              }
+
+              if (consentAccept) {
+                        consentAccept.addEventListener('click', () => {
+                                    localStorage.setItem(CONSENT_KEY, 'granted');
+                                    updateAnalyticsConsent(true);
+                                    consentBanner.classList.remove('show');
+                        });
+              }
+              if (consentReject) {
+                        consentReject.addEventListener('click', () => {
+                                    localStorage.setItem(CONSENT_KEY, 'denied');
+                                    updateAnalyticsConsent(false);
+                                    consentBanner.classList.remove('show');
+                        });
+              }
+      }
+  
+
 });
