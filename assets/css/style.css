@@ -744,7 +744,7 @@ section{
   color:var(--text);
   flex-shrink:0;
 }
-.founder-card h3{ font-size:20px; margin-bottom:4px; }
+.founder-card h3, .founder-card .founder-name{ font-size:20px; margin-bottom:4px; }
 .founder-role{
   font-family:var(--font-mono);
   font-size:13px;
