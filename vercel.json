@@ -1,7 +1,8 @@
 {
+  "cleanUrls": true,
   "redirects": [
     { "source": "/ai-agents", "destination": "/", "permanent": true },
     { "source": "/tiktok-shop-services", "destination": "/", "permanent": true },
-    { "source": "/seo", "destination": "/resources.html", "permanent": true }
+    { "source": "/seo", "destination": "/resources", "permanent": true }
   ]
 }
