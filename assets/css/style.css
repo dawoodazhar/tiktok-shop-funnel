@@ -356,6 +356,40 @@ section{
 }
 
 /* ============================================================
+   Pain point
+   ============================================================ */
+.pain-section{ padding:calc(var(--gap-section) * 0.75) 0; }
+.pain-main{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+  font-family:var(--font-display);
+  font-weight:700;
+  letter-spacing:-0.01em;
+  line-height:1.35;
+  font-size:clamp(22px,3.2vw,32px);
+  color:var(--text);
+}
+.pain-highlight{
+  background:linear-gradient(95deg, var(--cyan), var(--pink));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.pain-followup{
+  max-width:560px;
+  margin:20px auto 0;
+  text-align:center;
+  font-size:16.5px;
+  color:var(--text-muted);
+}
+.pain-cta{
+  margin-top:32px;
+  display:flex;
+  justify-content:center;
+}
+
+/* ============================================================
    Alternating section background (visual rhythm)
    ============================================================ */
 .section-alt{ background:var(--bg-alt); }
