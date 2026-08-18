@@ -1,7 +1,8 @@
 /* ============================================================
    ANOLOGE — TikTok Shop Growth funnel
    Design tokens
-   ============================================================ */
+       ============================================
+======================================= */
 :root{
   --bg:            #121317;
   --bg-alt:        #17181d;
@@ -300,6 +301,8 @@ section{
   font-size:17px;
   padding:17px 32px;
 }
+x
+.hero-secondary-cta:hover{ opacity:1; }
 .trust-strip{
   color:var(--text-muted);
   font-size:13px;
