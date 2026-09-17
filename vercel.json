@@ -9,6 +9,8 @@
     { "source": "/about-us", "destination": "/about", "permanent": true },
     { "source": "/about-us/", "destination": "/about", "permanent": true },
     { "source": "/5-common-mistakes-to-avoid-when-launching-your-shopify-store", "destination": "/guide-tiktok-shop-vs-ecommerce", "permanent": true },
-    { "source": "/5-common-mistakes-to-avoid-when-launching-your-shopify-store/", "destination": "/guide-tiktok-shop-vs-ecommerce", "permanent": true }
+    { "source": "/5-common-mistakes-to-avoid-when-launching-your-shopify-store/", "destination": "/guide-tiktok-shop-vs-ecommerce", "permanent": true },
+    { "source": "/contact", "destination": "/#audit", "permanent": true },
+    { "source": "/contact/", "destination": "/#audit", "permanent": true }
   ]
 }
