@@ -3,6 +3,12 @@
   "redirects": [
     { "source": "/ai-agents", "destination": "/", "permanent": true },
     { "source": "/tiktok-shop-services", "destination": "/", "permanent": true },
-    { "source": "/seo", "destination": "/resources", "permanent": true }
+    { "source": "/seo", "destination": "/resources", "permanent": true },
+    { "source": "/portfolio", "destination": "/resources", "permanent": true },
+    { "source": "/portfolio/", "destination": "/resources", "permanent": true },
+    { "source": "/about-us", "destination": "/about", "permanent": true },
+    { "source": "/about-us/", "destination": "/about", "permanent": true },
+    { "source": "/5-common-mistakes-to-avoid-when-launching-your-shopify-store", "destination": "/guide-tiktok-shop-vs-ecommerce", "permanent": true },
+    { "source": "/5-common-mistakes-to-avoid-when-launching-your-shopify-store/", "destination": "/guide-tiktok-shop-vs-ecommerce", "permanent": true }
   ]
 }
