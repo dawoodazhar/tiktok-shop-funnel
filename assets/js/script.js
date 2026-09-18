@@ -120,6 +120,27 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
               }
       }
-  
+
+  /* ---------- Theme toggle (dark / light) ---------- */
+  const THEME_KEY = 'anologe_theme';
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    const applyLabel = () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+    };
+    applyLabel();
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem(THEME_KEY, 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem(THEME_KEY, 'light');
+      }
+      applyLabel();
+    });
+  }
 
 });
