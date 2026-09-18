@@ -40,8 +40,8 @@
    (key "anologe_theme") or prefers-color-scheme, before first paint.
    ============================================================ */
 [data-theme="light"]{
-  --bg:            #ffffff;
-  --bg-alt:        #f5f6f8;
+  --bg:            #fcfcfd;
+  --bg-alt:        #eef0f4;
   --surface:       #ffffff;
   --surface-2:     #eef0f3;
   --line:          #e1e3e9;
@@ -51,7 +51,7 @@
   --pink:          #c81657;
   --cyan-dim:      #dcf6f4;
   --pink-dim:      #fbe2ea;
-  --bg-rgb:        255,255,255;
+  --bg-rgb:        252,252,253;
 }
 
 *{ margin:0; padding:0; box-sizing:border-box; }
@@ -69,6 +69,14 @@ body{
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+}
+[data-theme="light"] body{
+  background:
+    radial-gradient(640px 520px at -8% -6%, rgba(10,128,120,0.10), transparent 60%),
+    radial-gradient(640px 520px at 108% 8%, rgba(200,22,87,0.08), transparent 60%),
+    radial-gradient(720px 560px at 50% 115%, rgba(10,128,120,0.06), transparent 60%),
+    var(--bg);
+  background-attachment:fixed, fixed, fixed, scroll;
 }
 
 img{ max-width:100%; display:block; }
@@ -285,6 +293,12 @@ section{
   box-shadow:0 8px 24px -8px rgba(254,44,85,0.5);
 }
 .btn-primary:hover{ box-shadow:0 10px 28px -6px rgba(37,244,238,0.45); }
+[data-theme="light"] .btn-primary{
+  box-shadow:0 10px 24px -10px rgba(200,22,87,0.4), 0 6px 16px -8px rgba(10,128,120,0.3);
+}
+[data-theme="light"] .btn-primary:hover{
+  box-shadow:0 12px 28px -8px rgba(200,22,87,0.45), 0 6px 18px -6px rgba(10,128,120,0.35);
+}
 .btn-ghost{
   background:var(--surface-2);
   color:var(--text);
@@ -317,6 +331,10 @@ section{
   filter:blur(20px);
   pointer-events:none;
   z-index:0;
+}
+[data-theme="light"] .hero-glow{
+  background:radial-gradient(circle at 30% 30%, rgba(10,128,120,0.20), transparent 60%),
+             radial-gradient(circle at 70% 60%, rgba(200,22,87,0.18), transparent 60%);
 }
 .hero-inner{
   position:relative;
@@ -371,6 +389,17 @@ section{
   border:1px solid var(--line);
   overflow:hidden;
   box-shadow:0 40px 80px -40px rgba(0,0,0,0.7);
+}
+[data-theme="light"] .hero-visual{
+  box-shadow:0 30px 60px -30px rgba(20,20,35,0.22);
+}
+[data-theme="light"] .why-card,
+[data-theme="light"] .founder-card,
+[data-theme="light"] .resource-card,
+[data-theme="light"] .choice-option,
+[data-theme="light"] .stats-grid,
+[data-theme="light"] .proof-card{
+  box-shadow:0 1px 2px rgba(20,20,35,0.04), 0 12px 28px -18px rgba(20,20,35,0.14);
 }
 .hero-visual img{ width:100%; }
 

@@ -124,23 +124,55 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Theme toggle (dark / light) ---------- */
   const THEME_KEY = 'anologe_theme';
   const themeToggle = document.getElementById('themeToggle');
+
+  const getStoredTheme = () => {
+    try {
+      const v = localStorage.getItem(THEME_KEY);
+      return (v === 'light' || v === 'dark') ? v : null;
+    } catch (e) { return null; }
+  };
+  const setTheme = (mode) => {
+    if (mode === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  };
+
   if (themeToggle) {
     const applyLabel = () => {
       const isLight = document.documentElement.getAttribute('data-theme') === 'light';
       themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
     };
     applyLabel();
+
+    // Manual click always sets an explicit, persistent choice and takes over
+    // from the device/OS setting from this point on.
     themeToggle.addEventListener('click', () => {
       const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      if (isLight) {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem(THEME_KEY, 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem(THEME_KEY, 'light');
-      }
+      const next = isLight ? 'dark' : 'light';
+      setTheme(next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
       applyLabel();
     });
+
+    // Live-follow the device/OS light-dark setting for as long as the user
+    // hasn't explicitly picked a theme with the button above (no stored
+    // preference yet). This fires immediately when the OS theme is switched,
+    // without needing a page reload.
+    if ('matchMedia' in window) {
+      const mq = window.matchMedia('(prefers-color-scheme: light)');
+      const followSystem = () => {
+        if (getStoredTheme()) return; // user has an explicit choice, don't override it
+        setTheme(mq.matches ? 'light' : 'dark');
+        applyLabel();
+      };
+      if (mq.addEventListener) {
+        mq.addEventListener('change', followSystem);
+      } else if (mq.addListener) {
+        mq.addListener(followSystem); // Safari < 14 fallback
+      }
+    }
   }
 
 });
