@@ -15,6 +15,12 @@
   --pink:          #f6416c;
   --cyan-dim:      #1c3634;
   --pink-dim:      #3a1f2b;
+  /* Fixed-brightness accents for buttons/badges that always carry dark
+     foreground text on top of them — these do NOT change between themes,
+     unlike --cyan/--pink above, which adapt for text/border contrast. */
+  --cyan-solid:    #2dd9d1;
+  --pink-solid:    #f6416c;
+  --bg-rgb:        18,19,23;
 
   --font-display:  'Sora', 'Space Grotesk', sans-serif;
   --font-body:     'Inter', sans-serif;
@@ -26,6 +32,26 @@
   --radius-l:      24px;
 
   --gap-section:   clamp(48px, 6vw, 96px);
+}
+
+/* ============================================================
+   Light theme override
+   Activated by <html data-theme="light">, set from localStorage
+   (key "anologe_theme") or prefers-color-scheme, before first paint.
+   ============================================================ */
+[data-theme="light"]{
+  --bg:            #ffffff;
+  --bg-alt:        #f5f6f8;
+  --surface:       #ffffff;
+  --surface-2:     #eef0f3;
+  --line:          #e1e3e9;
+  --text:          #15161b;
+  --text-muted:    #52545c;
+  --cyan:          #0c8f88;
+  --pink:          #c81657;
+  --cyan-dim:      #dcf6f4;
+  --pink-dim:      #fbe2ea;
+  --bg-rgb:        255,255,255;
 }
 
 *{ margin:0; padding:0; box-sizing:border-box; }
@@ -119,7 +145,7 @@ section{
   justify-content:space-between;
   gap:24px;
   padding:16px 24px;
-  background:rgba(18,19,23,0.88);
+  background:rgba(var(--bg-rgb),0.88);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
@@ -175,6 +201,32 @@ section{
 .hamburger.open span:nth-child(2){ opacity:0; }
 .hamburger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
+.theme-toggle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  width:36px; height:36px;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:8px;
+  cursor:pointer;
+  transition:border-color .15s ease;
+}
+.theme-toggle:hover{ border-color:var(--cyan); }
+.theme-toggle svg{
+  width:18px; height:18px;
+  stroke:var(--text);
+  fill:none;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.theme-toggle .icon-sun{ display:none; }
+.theme-toggle .icon-moon{ display:block; }
+[data-theme="light"] .theme-toggle .icon-sun{ display:block; }
+[data-theme="light"] .theme-toggle .icon-moon{ display:none; }
+
 .mobile-menu{
   position:fixed;
   top:0; left:0; right:0; bottom:0;
@@ -228,7 +280,7 @@ section{
 }
 .btn:active{ transform:scale(0.97); }
 .btn-primary{
-  background:linear-gradient(95deg, var(--cyan), var(--pink));
+  background:linear-gradient(95deg, var(--cyan-solid), var(--pink-solid));
   color:#0a0a0d;
   box-shadow:0 8px 24px -8px rgba(254,44,85,0.5);
 }
@@ -731,7 +783,7 @@ section{
   left:0; right:0; bottom:0;
   z-index:90;
   padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-  background:rgba(18,19,23,0.94);
+  background:rgba(var(--bg-rgb),0.94);
   backdrop-filter:blur(10px);
   border-top:1px solid var(--line);
   transform:translateY(110%);
@@ -1040,7 +1092,7 @@ a:focus-visible, button:focus-visible{
      color:var(--text, #f2f2f5);
 }
 .btn-cookie-accept{
-     background:var(--cyan, #2dd9d1);
+     background:var(--cyan-solid, #2dd9d1);
      color:#0b0c0f;
      border-color:transparent;
 }
