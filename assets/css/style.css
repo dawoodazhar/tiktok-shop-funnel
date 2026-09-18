@@ -685,6 +685,44 @@ section{
   box-shadow:0 0 0 3px rgba(45,217,209,0.15);
 }
 
+.choice-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.choice-option{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  cursor:pointer;
+  padding:11px 18px;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius-s);
+  font-family:var(--font-body);
+  font-size:14.5px;
+  color:var(--text);
+  transition:border-color .15s ease, background .15s ease, box-shadow .15s ease;
+  user-select:none;
+}
+.choice-option input{
+  position:absolute;
+  opacity:0;
+  width:0;
+  height:0;
+  pointer-events:none;
+}
+.choice-option:hover{ border-color:var(--cyan); }
+.choice-option:has(input:checked){
+  border-color:var(--cyan);
+  background:var(--cyan-dim);
+  box-shadow:0 0 0 3px rgba(45,217,209,0.15);
+}
+.choice-option:has(input:focus-visible){
+  outline:2px solid var(--cyan);
+  outline-offset:2px;
+}
+
 /* ============================================================
    Sticky mobile CTA bar
    ============================================================ */
