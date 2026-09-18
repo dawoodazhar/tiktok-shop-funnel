@@ -22,8 +22,6 @@
 
 <!-- Hreflang: single English page serving DE/US/UK markets -->
 <link rel="alternate" hreflang="en" href="https://www.anologe.com/guide-pixel-setup">
-<link rel="alternate" hreflang="en-US" href="https://www.anologe.com/guide-pixel-setup">
-<link rel="alternate" hreflang="en-GB" href="https://www.anologe.com/guide-pixel-setup">
 <link rel="alternate" hreflang="x-default" href="https://www.anologe.com/guide-pixel-setup">
 
 <link rel="icon" type="image/png" href="assets/img/logo-icon.png">
@@ -129,10 +127,12 @@
   <a href="/#audit" class="btn btn-primary mobile-link">Book Free Audit</a>
 </div>
 
+<main>
+
 <section class="wrap legal-page">
   <span class="eyebrow">Guide</span>
   <h1 style="margin-top:14px;">TikTok Pixel Setup: Step-by-Step Guide</h1>
-  <span class="updated">Last updated 2026 &middot; <a href="/resources">All guides</a></span>
+  <span class="updated">By <a href="/about">Dawood Azhar</a> &middot; Last updated 2026 &middot; <a href="/resources">All guides</a></span>
 
   <h2>Why the Pixel Is the Foundation, Not a Formality</h2>
   <p>The TikTok Pixel is a snippet of code installed on a storefront that reports visitor actions back to TikTok Ads Manager. Without it, TikTok's ad algorithms have no reliable signal for who is actually converting, which means campaigns end up optimizing for traffic instead of sales. This is true for standard campaigns and even more true for automated ones like GMV Max, which depend entirely on pixel data to know what a real sale looks like.</p>
@@ -153,15 +153,17 @@
 
   <h2>Verifying the Pixel Actually Works</h2>
   <p>Installation is not the same as verification. Once installed, every event should be checked individually in TikTok's Event Manager before a campaign goes live: does the event fire at all, does it fire at the right step, and does it carry the correct value and product data. A pixel that appears "installed" but fires events inconsistently, or with mismatched values, will quietly cap how well any ad campaign built on top of it can perform, and none of this shows up from the ads dashboard alone.</p>
-  <p>This is why pixel setup is treated as its own deliverable at Anologe rather than an assumed first step folded into campaign launch. See our <a href="/case-study-pixel-setup">Pixel Setup case study</a> for what this looked like on a real storefront, or the <a href="/guide-gmv-max">GMV Max guide</a> for how clean pixel data translated into a 9.35&times; ROI campaign.</p>
+  <p>This is why pixel setup is treated as its own deliverable at Anologe rather than an assumed first step folded into campaign launch, as part of our <a href="/#services">pixel &amp; event tracking service</a>. See our <a href="/case-study-pixel-setup">Pixel Setup case study</a> for what this looked like on a real storefront, or the <a href="/guide-gmv-max">GMV Max guide</a> for how clean pixel data translated into a 9.35&times; ROI campaign.</p>
 
   <h2>Common Pixel Problems Worth Checking For</h2>
   <p>Duplicate events firing from both a plugin integration and manually placed code, which inflates reported conversions without representing real sales. Purchase events that fire but carry a $0 or incorrect value, common with certain checkout customizations. Events that fire correctly on desktop but silently fail on mobile checkout flows, which matters given how much TikTok Shop traffic is mobile-first. And consent-mode gaps, where analytics and ad-storage consent settings block pixel events before a visitor accepts cookies, understating real traffic and conversions.</p>
 
-  <p style="margin-top:40px;"><a href="/#audit" class="btn btn-primary">Get My Free TikTok Shop Growth Audit</a></p>
+  <p style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap;"><a href="/#audit" class="btn btn-primary">Get My Free TikTok Shop Growth Audit</a><a href="/resources" class="btn btn-ghost">Browse All Guides &amp; Case Studies</a></p>
 
   <p class="citation-note">Related: <a href="/guide-gmv-max">TikTok Shop GMV Max: Complete Guide</a> &middot; <a href="/guide-tiktok-shop-vs-ecommerce">TikTok Shop vs. Traditional E-commerce</a> &middot; <a href="/case-study-pixel-setup">Pixel Setup Case Study</a><br>Sources: <a href="https://ads.tiktok.com/help/article/gmv-max" target="_blank" rel="noopener">TikTok Ads Help: GMV Max</a>, <a href="https://seller-us.tiktok.com/university" target="_blank" rel="noopener">TikTok Shop Seller Academy</a>.</p>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
