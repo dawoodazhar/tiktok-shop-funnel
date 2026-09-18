@@ -686,23 +686,48 @@
         </div>
 
         <div class="form-group">
-          <label for="f-budget">Do you currently have a budget allocated for TikTok Shop growth/ads?</label>
-          <textarea id="f-budget" name="Budget" rows="2" required></textarea>
+          <label>Are you just starting on TikTok Shop, or already selling elsewhere and looking to expand?</label>
+          <div class="choice-group" role="radiogroup" aria-label="Platform status">
+            <label class="choice-option">
+              <input type="radio" name="Platform status" value="Just starting on TikTok Shop" required>
+              <span>Just starting on TikTok Shop</span>
+            </label>
+            <label class="choice-option">
+              <input type="radio" name="Platform status" value="Already selling elsewhere, expanding to TikTok Shop" required>
+              <span>Already selling elsewhere, expanding to TikTok Shop</span>
+            </label>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="f-authority">Are you the person who makes the final decision on this, or will someone else be involved?</label>
-          <textarea id="f-authority" name="Decision maker" rows="2" required></textarea>
+          <label>Do you currently have a budget allocated for TikTok Shop growth/ads?</label>
+          <div class="choice-group" role="radiogroup" aria-label="Budget range">
+            <label class="choice-option">
+              <input type="radio" name="Budget" value="$1K - $5K" required>
+              <span>$1K – $5K</span>
+            </label>
+            <label class="choice-option">
+              <input type="radio" name="Budget" value="$5K - $10K" required>
+              <span>$5K – $10K</span>
+            </label>
+            <label class="choice-option">
+              <input type="radio" name="Budget" value="$10K - $15K" required>
+              <span>$10K – $15K</span>
+            </label>
+            <label class="choice-option">
+              <input type="radio" name="Budget" value="$15K - $25K" required>
+              <span>$15K – $25K</span>
+            </label>
+            <label class="choice-option">
+              <input type="radio" name="Budget" value="$25K+" required>
+              <span>$25K+</span>
+            </label>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="f-need">What's your biggest challenge with TikTok Shop right now?</label>
-          <textarea id="f-need" name="Biggest challenge" rows="3" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="f-timeline">When are you looking to get started?</label>
-          <textarea id="f-timeline" name="Timeline" rows="2" required></textarea>
+          <label for="f-goal">What's your main goal with TikTok Shop?</label>
+          <input type="text" id="f-goal" name="Goal" maxlength="100" placeholder="e.g. Scale to $50K/month GMV" required>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">Book My Free Audit</button>
