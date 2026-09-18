@@ -22,16 +22,16 @@
   --pink-solid:    #f6416c;
   --bg-rgb:        18,19,23;
 
-  --font-display:  'Sora', 'Space Grotesk', sans-serif;
-  --font-body:     'Inter', sans-serif;
-  --font-mono:     'IBM Plex Mono', monospace;
+  --font-display:  -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:     -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:     ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
 
   --container:     1120px;
   --radius-s:      10px;
   --radius-m:      16px;
   --radius-l:      24px;
 
-  --gap-section:   clamp(48px, 6vw, 96px);
+  --gap-section:   clamp(64px, 9vw, 140px);
 }
 
 /* ============================================================
@@ -91,9 +91,9 @@ ul{ list-style:none; }
 
 h1,h2,h3{
   font-family:var(--font-display);
-  font-weight:700;
-  letter-spacing:-0.02em;
-  line-height:1.08;
+  font-weight:600;
+  letter-spacing:-0.03em;
+  line-height:1.05;
 }
 
 .eyebrow{
@@ -288,17 +288,14 @@ section{
 }
 .btn:active{ transform:scale(0.97); }
 .btn-primary{
-  background:linear-gradient(95deg, var(--cyan-solid), var(--pink-solid));
+  background:var(--cyan-solid);
   color:#0a0a0d;
-  box-shadow:0 8px 24px -8px rgba(254,44,85,0.5);
+  box-shadow:none;
+  transition:transform .15s cubic-bezier(0.16,1,0.3,1), background-color .15s ease;
 }
-.btn-primary:hover{ box-shadow:0 10px 28px -6px rgba(37,244,238,0.45); }
-[data-theme="light"] .btn-primary{
-  box-shadow:0 10px 24px -10px rgba(200,22,87,0.4), 0 6px 16px -8px rgba(10,128,120,0.3);
-}
-[data-theme="light"] .btn-primary:hover{
-  box-shadow:0 12px 28px -8px rgba(200,22,87,0.45), 0 6px 18px -6px rgba(10,128,120,0.35);
-}
+.btn-primary:hover{ background:var(--pink-solid); transform:translateY(-1px); }
+[data-theme="light"] .btn-primary{ box-shadow:none; }
+[data-theme="light"] .btn-primary:hover{ box-shadow:none; }
 .btn-ghost{
   background:var(--surface-2);
   color:var(--text);
@@ -344,7 +341,7 @@ section{
   margin:0 auto;
 }
 .hero h1{
-  font-size:clamp(34px, 6.2vw, 68px);
+  font-size:clamp(40px, 7.4vw, 84px);
   margin-top:20px;
 }
 .hero h1 .num{
@@ -1054,10 +1051,10 @@ footer .footer-inner{
    ============================================================ */
 .reveal{
   opacity:0;
-  transform:translateY(18px);
-  transition:opacity .6s ease, transform .6s ease;
+  transform:translateY(28px) scale(0.98);
+  transition:opacity .9s cubic-bezier(0.16,1,0.3,1), transform .9s cubic-bezier(0.16,1,0.3,1);
 }
-.reveal.in{ opacity:1; transform:translateY(0); }
+.reveal.in{ opacity:1; transform:translateY(0) scale(1); }
 
 /* focus visibility */
 a:focus-visible, button:focus-visible{
