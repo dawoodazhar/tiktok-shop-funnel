@@ -440,6 +440,15 @@ section{
    Pain point
    ============================================================ */
 .pain-section{ padding:calc(var(--gap-section) * 0.75) 0; }
+.pain-icon{
+  width:56px; height:56px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--pink-dim);
+  color:var(--pink);
+}
+.pain-icon svg{ width:28px; height:28px; stroke:currentColor; }
 .pain-main{
   max-width:760px;
   margin:0 auto;
