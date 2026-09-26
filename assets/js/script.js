@@ -19,32 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => el.classList.add('in'));
   }
 
-  /* ---------- Side rail active dot + click-to-scroll ---------- */
-  const railButtons = document.querySelectorAll('.side-rail button');
-  const sections = Array.from(railButtons)
-    .map(btn => document.getElementById(btn.dataset.target))
-    .filter(Boolean);
-
-  railButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = document.getElementById(btn.dataset.target);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  if ('IntersectionObserver' in window && sections.length) {
-    const railObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          railButtons.forEach(b => b.classList.remove('active'));
-          const match = document.querySelector(`.side-rail button[data-target="${entry.target.id}"]`);
-          if (match) match.classList.add('active');
-        }
-      });
-    }, { threshold: 0.5 });
-    sections.forEach(sec => railObserver.observe(sec));
-  }
-
   /* ---------- Sticky mobile CTA (show after hero) ---------- */
   const stickyCta = document.getElementById('stickyCta');
   const heroSection = document.getElementById('hero'); const waFloat = document.querySelector('.wa-float');
@@ -175,4 +149,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+});
+
+// ============================================================
+// Two-step audit form (index.html #auditForm)
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('auditForm');
+  if (!form) return;
+
+  const step1 = form.querySelector('[data-step="1"]');
+  const step2 = form.querySelector('[data-step="2"]');
+  const continueBtn = document.getElementById('formContinueBtn');
+  const backBtn = document.getElementById('formBackBtn');
+  const step2Fieldset = document.getElementById('step2Fieldset');
+  const progress1 = form.querySelector('[data-progress-step="1"]');
+
+  const progressWrap = form.querySelector('.form-progress');
+
+  function goToStep2() {
+    // Validate step 1 fields natively before proceeding
+    const step1Inputs = step1.querySelectorAll('input[required]');
+    for (const input of step1Inputs) {
+      if (!input.checkValidity()) {
+        input.reportValidity();
+        return;
+      }
+    }
+    step1.classList.remove('active');
+    step2.classList.add('active');
+    step2Fieldset.disabled = false;
+    if (progressWrap) {
+      progressWrap.innerHTML = '<span data-progress-step="1">Step 1</span><span class="active" data-progress-step="2">Step 2 of 2</span>';
+    }
+    step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function goToStep1() {
+    step2.classList.remove('active');
+    step1.classList.add('active');
+    step2Fieldset.disabled = true;
+    if (progressWrap) {
+      progressWrap.innerHTML = '<span class="active" data-progress-step="1">Step 1 of 2</span>';
+    }
+  }
+
+  if (continueBtn) continueBtn.addEventListener('click', goToStep2);
+  if (backBtn) backBtn.addEventListener('click', goToStep1);
+
+  // Hand off name + email to the Calendly booking step on the thank-you page.
+  form.addEventListener('submit', () => {
+    try {
+      const name = form.querySelector('#f-name')?.value || '';
+      const email = form.querySelector('#f-email')?.value || '';
+      localStorage.setItem('anologe_lead_name', name);
+      localStorage.setItem('anologe_lead_email', email);
+    } catch (e) {}
+  });
 });
