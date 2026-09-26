@@ -1217,6 +1217,8 @@ a:focus-visible, button:focus-visible{
   border:1px solid var(--line);
   border-radius:var(--radius-m);
   padding:22px;
+  display:flex;
+  flex-direction:column;
 }
 .pricing-card h3{ font-size:16px; margin-bottom:8px; }
 .pricing-card p{ font-size:14px; color:var(--text-muted); }
@@ -1226,6 +1228,15 @@ a:focus-visible, button:focus-visible{
 .pricing-card ul.pricing-includes{ margin:12px 0 0; padding-left:18px; color:var(--text-muted); font-size:13.5px; display:flex; flex-direction:column; gap:6px; }
 .pricing-card.pricing-custom{ border-color:var(--cyan); }
 .pricing-card.pricing-custom .price{ color:var(--cyan); }
+.pricing-card .pricing-cta{
+  margin-top:auto;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  font-size:14px;
+  font-weight:600;
+  color:var(--cyan);
+}
+.pricing-card .pricing-cta:hover{ text-decoration:underline; }
 
 /* ============================================================
    Two-step lead form
