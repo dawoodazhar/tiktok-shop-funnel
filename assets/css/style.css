@@ -32,7 +32,7 @@
   --radius-m:      16px;
   --radius-l:      24px;
 
-  --gap-section:   clamp(64px, 9vw, 140px);
+  --gap-section:   clamp(40px, 5vw, 84px);
 }
 
 /* ============================================================
@@ -124,7 +124,7 @@ section{
 
 .section-head{
   max-width:640px;
-  margin-bottom:48px;
+  margin-bottom:32px;
 }
 .section-head h2{
   font-size:clamp(28px,4vw,42px);
@@ -317,7 +317,7 @@ section{
    Hero
    ============================================================ */
 .hero{
-  padding-top:calc(var(--gap-section) + 56px);
+  padding-top:calc(var(--gap-section) + 32px);
   overflow:hidden;
 }
 .hero-inner{
@@ -368,7 +368,7 @@ section{
 .hero-visual{
   position:relative;
   z-index:1;
-  margin-top:64px;
+  margin-top:40px;
   border-radius:var(--radius-l);
   border:1px solid var(--line);
   overflow:hidden;
@@ -390,7 +390,7 @@ section{
 /* ============================================================
    Stats strip
    ============================================================ */
-.stats{ padding:56px 0; }
+.stats{ padding:36px 0; }
 .stats-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -1005,7 +1005,7 @@ footer .footer-inner{
    Legal / simple content pages
    ============================================================ */
 .legal-page{
-  padding-top:calc(var(--gap-section) + 72px);
+  padding-top:calc(var(--gap-section) + 40px);
   padding-bottom:var(--gap-section);
   max-width:720px;
 }
@@ -1220,6 +1220,12 @@ a:focus-visible, button:focus-visible{
 }
 .pricing-card h3{ font-size:16px; margin-bottom:8px; }
 .pricing-card p{ font-size:14px; color:var(--text-muted); }
+.pricing-card .price{ font-size:26px; font-weight:700; margin:2px 0 4px; }
+.pricing-card .price .price-period{ font-size:13px; font-weight:500; color:var(--text-muted); }
+.pricing-card .price-scope{ font-size:12.5px; color:var(--text-muted); margin-bottom:12px; }
+.pricing-card ul.pricing-includes{ margin:12px 0 0; padding-left:18px; color:var(--text-muted); font-size:13.5px; display:flex; flex-direction:column; gap:6px; }
+.pricing-card.pricing-custom{ border-color:var(--cyan); }
+.pricing-card.pricing-custom .price{ color:var(--cyan); }
 
 /* ============================================================
    Two-step lead form
