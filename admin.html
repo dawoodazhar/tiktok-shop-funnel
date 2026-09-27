@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Anologe — Content Dashboard</title>
+<title>GMV Forge — Content Dashboard</title>
 <style>
   :root{
     --bg:#0b0f14; --card:#131a22; --border:#232d38; --text:#e8edf2; --muted:#8a97a6;
@@ -77,7 +77,7 @@
   <div id="dashboard" class="hidden">
     <div class="top-actions">
       <div>
-        <h1>Anologe Content Dashboard</h1>
+        <h1>GMV Forge Content Dashboard</h1>
         <p class="sub">Edit your live site's text. Saving here pushes straight to GitHub and redeploys automatically in about a minute.</p>
       </div>
       <button class="secondary" onclick="disconnect()">Disconnect</button>
@@ -132,17 +132,17 @@ function b64DecodeUnicode(str) {
   return decodeURIComponent(atob(str).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
 }
 
-function getToken() { return localStorage.getItem('anologe_gh_pat'); }
+function getToken() { return localStorage.getItem('gmvforge_gh_pat'); }
 
 function saveToken() {
   const val = document.getElementById('patInput').value.trim();
   if (!val) return;
-  localStorage.setItem('anologe_gh_pat', val);
+  localStorage.setItem('gmvforge_gh_pat', val);
   init();
 }
 
 function disconnect() {
-  localStorage.removeItem('anologe_gh_pat');
+  localStorage.removeItem('gmvforge_gh_pat');
   location.reload();
 }
 

@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI answer/generative engines relevant to Anologe's GEO strategy - explicitly allowed
+# AI answer/generative engines relevant to GMV Forge's GEO strategy - explicitly allowed
 User-agent: GPTBot
 Allow: /
 
@@ -21,4 +21,4 @@ Allow: /
 User-agent: Bytespider
 Disallow: /
 
-Sitemap: https://www.anologe.com/sitemap.xml
+Sitemap: https://www.gmvforge.com/sitemap.xml

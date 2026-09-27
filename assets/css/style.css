@@ -1,5 +1,5 @@
 /* ============================================================
-   ANOLOGE — TikTok Shop Growth funnel
+   GMV FORGE — TikTok Shop Growth funnel
    Design tokens
        ============================================
 ======================================= */
@@ -38,7 +38,7 @@
 /* ============================================================
    Light theme override
    Activated by <html data-theme="light">, set from localStorage
-   (key "anologe_theme") or prefers-color-scheme, before first paint.
+   (key "gmvforge_theme") or prefers-color-scheme, before first paint.
    ============================================================ */
 [data-theme="light"]{
   --bg:            #fcfcfd;

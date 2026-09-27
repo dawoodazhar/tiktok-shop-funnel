@@ -1,5 +1,5 @@
 // ============================================================
-// Anologe — TikTok Shop funnel interactions
+// GMV Forge — TikTok Shop funnel interactions
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
       /* ---------- Cookie consent banner (GDPR) ---------- */
-      const CONSENT_KEY = 'anologe_cookie_consent';
+      const CONSENT_KEY = 'gmvforge_cookie_consent';
       const consentBanner = document.getElementById('cookieConsent');
       const consentAccept = document.getElementById('cookieAccept');
       const consentReject = document.getElementById('cookieReject');
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
   /* ---------- Theme toggle (dark / light) ---------- */
-  const THEME_KEY = 'anologe_theme';
+  const THEME_KEY = 'gmvforge_theme';
   const themeToggle = document.getElementById('themeToggle');
 
   const getStoredTheme = () => {
@@ -202,8 +202,8 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const name = form.querySelector('#f-name')?.value || '';
       const email = form.querySelector('#f-email')?.value || '';
-      localStorage.setItem('anologe_lead_name', name);
-      localStorage.setItem('anologe_lead_email', email);
+      localStorage.setItem('gmvforge_lead_name', name);
+      localStorage.setItem('gmvforge_lead_email', email);
     } catch (e) {}
   });
 });
