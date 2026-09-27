@@ -1014,7 +1014,7 @@ footer .footer-inner{
 .legal-page h2{ font-size:20px; margin:36px 0 12px; }
 .legal-page p, .legal-page li{ color:var(--text-muted); font-size:15px; line-height:1.75; margin-bottom:14px; }
 .legal-page ul{ padding-left:20px; list-style:disc; margin-bottom:14px; }
-.legal-page a{ color:var(--cyan); }
+.legal-page a:not(.btn){ color:var(--cyan); }
 .legal-page strong{ color:var(--text); }
 
 /* ============================================================
