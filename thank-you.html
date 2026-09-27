@@ -5,7 +5,7 @@
 <script>
 (function(){
   try{
-    var t = localStorage.getItem('anologe_theme');
+    var t = localStorage.getItem('gmvforge_theme');
     if(!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){ t = 'light'; }
     if(t === 'light'){ document.documentElement.setAttribute('data-theme','light'); }
   }catch(e){}
@@ -25,7 +25,7 @@
   gtag('js', new Date());
   gtag('config', 'G-E2W3VQE759');
 </script>
-<title>You're In: Book Your Call | Anologe</title>
+<title>You're In: Book Your Call | GMV Forge</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="assets/img/logo-icon.png">
 
@@ -38,7 +38,7 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="topbar" style="justify-content:center;">
-  <a class="logo" href="/"><img src="assets/img/logo-icon.png" alt="Anologe"> anologe<span>.</span></a>
+  <a class="logo" href="/"><img src="assets/img/logo-icon.png" alt="GMV Forge"> gmvforge<span>.</span></a>
   <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" style="position:absolute; right:24px;">
     <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
@@ -64,16 +64,16 @@
     <script>
       (function(){
         try{
-          var name = localStorage.getItem('anologe_lead_name');
-          var email = localStorage.getItem('anologe_lead_email');
+          var name = localStorage.getItem('gmvforge_lead_name');
+          var email = localStorage.getItem('gmvforge_lead_email');
           if (name || email) {
             var el = document.getElementById('calendlyWidget');
             var url = el.getAttribute('data-url');
             if (name) url += '&name=' + encodeURIComponent(name);
             if (email) url += '&email=' + encodeURIComponent(email);
             el.setAttribute('data-url', url);
-            localStorage.removeItem('anologe_lead_name');
-            localStorage.removeItem('anologe_lead_email');
+            localStorage.removeItem('gmvforge_lead_name');
+            localStorage.removeItem('gmvforge_lead_email');
           }
         }catch(e){}
       })();
@@ -83,7 +83,7 @@
 
 <footer>
   <div class="wrap" style="text-align:center;">
-    Anologe. TikTok Shop growth partner. WhatsApp:
+    GMV Forge. TikTok Shop growth partner. WhatsApp:
     <a href="https://wa.me/4915214082385" target="_blank" rel="noopener" style="color:var(--cyan);">+49 152 1408 2385</a>
     <div style="margin-top:10px;">
       <a href="/privacy" style="color:var(--text-muted); margin-right:16px;">Privacy Policy</a>
