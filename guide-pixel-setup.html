@@ -56,11 +56,27 @@
   "@type": "Article",
   "headline": "TikTok Pixel Setup: Step-by-Step Guide",
   "description": "How to install and verify the TikTok Pixel for e-commerce: which events matter, how to check clean data flow, and why pixel setup is its own deliverable.",
-  "author": { "@type": "Person", "name": "Dawood Azhar" },
-  "publisher": { "@type": "Organization", "name": "GMV Forge", "logo": { "@type": "ImageObject", "url": "https://www.gmvforge.com/assets/img/logo-icon.png" } },
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.gmvforge.com/about#person",
+    "name": "Dawood Azhar",
+    "url": "https://www.gmvforge.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.gmvforge.com/#organization",
+    "name": "GMV Forge",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gmvforge.com/assets/img/logo-icon.png"
+    }
+  },
   "mainEntityOfPage": "https://www.gmvforge.com/guide-pixel-setup",
   "datePublished": "2026-08-12",
-  "dateModified": "2026-08-12"
+  "dateModified": "2026-08-12",
+  "isPartOf": {
+    "@id": "https://www.gmvforge.com/#website"
+  }
 }
 </script>
 
@@ -72,33 +88,71 @@
     {
       "@type": "Question",
       "name": "What is the TikTok Pixel?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The TikTok Pixel is a snippet of code installed on a storefront that reports visitor actions back to TikTok Ads Manager, giving the ad algorithm a reliable signal of who is actually converting rather than just clicking or viewing." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The TikTok Pixel is a snippet of code installed on a storefront that reports visitor actions back to TikTok Ads Manager, giving the ad algorithm a reliable signal of who is actually converting rather than just clicking or viewing."
+      }
     },
     {
       "@type": "Question",
       "name": "Which TikTok Pixel events matter most for e-commerce?",
-      "acceptedAnswer": { "@type": "Answer", "text": "ViewContent, AddToCart, InitiateCheckout, CompletePayment, and Purchase. Each needs to fire at the correct step in the customer journey and pass matching product and value data." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ViewContent, AddToCart, InitiateCheckout, CompletePayment, and Purchase. Each needs to fire at the correct step in the customer journey and pass matching product and value data."
+      }
     },
     {
       "@type": "Question",
       "name": "How do I know if my TikTok Pixel is actually working?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Check every event individually in TikTok's Event Manager rather than assuming installation equals correct firing. A pixel can appear installed while still firing events inconsistently or with mismatched values, which quietly caps ad performance." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check every event individually in TikTok's Event Manager rather than assuming installation equals correct firing. A pixel can appear installed while still firing events inconsistently or with mismatched values, which quietly caps ad performance."
+      }
     },
     {
       "@type": "Question",
       "name": "Does pixel setup affect GMV Max campaign performance?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, directly. GMV Max and other automated TikTok campaigns rely on pixel data to know what a real sale looks like. Inconsistent or missing events mean the algorithm optimizes against noisy signal, which caps performance regardless of ad spend." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, directly. GMV Max and other automated TikTok campaigns rely on pixel data to know what a real sale looks like. Inconsistent or missing events mean the algorithm optimizes against noisy signal, which caps performance regardless of ad spend."
+      }
     },
     {
       "@type": "Question",
       "name": "How long does TikTok Pixel setup take?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Installation itself is usually quick, often same-day, but verifying every event individually in Event Manager and confirming clean data flow into Ads Manager typically takes a few days of monitoring before a campaign should launch on top of it." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Installation itself is usually quick, often same-day, but verifying every event individually in Event Manager and confirming clean data flow into Ads Manager typically takes a few days of monitoring before a campaign should launch on top of it."
+      }
     }
   ]
 }
 </script>
   <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gmvforge.com/" }, { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://www.gmvforge.com/resources" }, { "@type": "ListItem", "position": 3, "name": "TikTok Pixel Setup Guide", "item": "https://www.gmvforge.com/guide-pixel-setup" } ] }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.gmvforge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://www.gmvforge.com/resources"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "TikTok Pixel Setup Guide",
+      "item": "https://www.gmvforge.com/guide-pixel-setup"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -111,7 +165,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/#why">Why Us</a></li>
       <li><a href="/#reviews">Reviews</a></li>
-      <li><a href="/#portfolio">Case Studies</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/#faq">FAQ</a></li>
@@ -134,7 +188,7 @@
   <a href="/" class="mobile-link">Home</a>
   <a href="/#why" class="mobile-link">Why Us</a>
   <a href="/#reviews" class="mobile-link">Reviews</a>
-  <a href="/#portfolio" class="mobile-link">Case Studies</a>
+  <a href="/case-studies" class="mobile-link">Case Studies</a>
   <a href="/services" class="mobile-link">Services</a>
   <a href="/#pricing" class="mobile-link">Pricing</a>
   <a href="/#faq" class="mobile-link">FAQ</a>
@@ -168,7 +222,7 @@
 
   <h2>Verifying the Pixel Actually Works</h2>
   <p>Installation is not the same as verification. Once installed, every event should be checked individually in TikTok's Event Manager before a campaign goes live: does the event fire at all, does it fire at the right step, and does it carry the correct value and product data. A pixel that appears "installed" but fires events inconsistently, or with mismatched values, will quietly cap how well any ad campaign built on top of it can perform, and none of this shows up from the ads dashboard alone.</p>
-  <p>This is why pixel setup is treated as its own deliverable at GMV Forge rather than an assumed first step folded into campaign launch, as part of our <a href="/#services">pixel &amp; event tracking service</a>. See the <a href="/guide-gmv-max">GMV Max guide</a> for how clean pixel data translated into a 9.35&times; ROI campaign.</p>
+  <p>This is why pixel setup is treated as its own deliverable at GMV Forge rather than an assumed first step folded into campaign launch, as part of our <a href="/service-setup-launch">Setup &amp; Launch service (pixel and event tracking)</a>. See the <a href="/guide-gmv-max">GMV Max guide</a> for how clean pixel data translated into a 9.35&times; ROI campaign.</p>
 
   <h2>Common Pixel Problems Worth Checking For</h2>
   <p>Duplicate events firing from both a plugin integration and manually placed code, which inflates reported conversions without representing real sales. Purchase events that fire but carry a $0 or incorrect value, common with certain checkout customizations. Events that fire correctly on desktop but silently fail on mobile checkout flows, which matters given how much TikTok Shop traffic is mobile-first. And consent-mode gaps, where analytics and ad-storage consent settings block pixel events before a visitor accepts cookies, understating real traffic and conversions.</p>
@@ -192,7 +246,7 @@
       <ul class="footer-links">
         <li><a href="/#why">Why Us</a></li>
         <li><a href="/#reviews">Reviews</a></li>
-        <li><a href="/#portfolio">Case Studies</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
         <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/#faq">FAQ</a></li>

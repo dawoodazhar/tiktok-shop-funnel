@@ -55,30 +55,98 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "TikTok Shop Growth Management",
-  "provider": { "@type": "ProfessionalService", "name": "GMV Forge", "url": "https://www.gmvforge.com/" },
+  "provider": {
+    "@id": "https://www.gmvforge.com/#organization"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "TikTok Shop Services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Setup & Launch", "url": "https://www.gmvforge.com/service-setup-launch" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GMV Max Management", "url": "https://www.gmvforge.com/service-gmv-max-management" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creator & Affiliate Management", "url": "https://www.gmvforge.com/service-creator-affiliate-management" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Management", "url": "https://www.gmvforge.com/service-full-management" } }
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Setup & Launch",
+          "url": "https://www.gmvforge.com/service-setup-launch"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "GMV Max Management",
+          "url": "https://www.gmvforge.com/service-gmv-max-management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Creator & Affiliate Management",
+          "url": "https://www.gmvforge.com/service-creator-affiliate-management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Full Management",
+          "url": "https://www.gmvforge.com/service-full-management"
+        }
+      }
     ]
   }
 }
 </script>
 <script type="application/ld+json">
-  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gmvforge.com/" }, { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.gmvforge.com/services" } ] }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.gmvforge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.gmvforge.com/services"
+    }
+  ]
+}
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How much does a TikTok Shop agency cost?", "acceptedAnswer": { "@type": "Answer", "text": "GMV Forge's four services are each quoted as a monthly retainer scoped during a free audit, based on your shop's stage, catalog size, and which combination of setup, ads, content, and affiliates you need." } },
-    { "@type": "Question", "name": "Which TikTok Shop service is right for my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Not yet live on TikTok Shop: start with Setup & Launch. Already live and ready to scale ads: GMV Max Management. Want creator-driven organic sales: Creator & Affiliate Management. Stalled at $5-30K/month and want one team running everything: Full Management." } },
-    { "@type": "Question", "name": "Can I switch services as my shop grows?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most brands start with Setup & Launch or GMV Max Management, then move into Full Management once they need ads, content, and affiliates coordinated together rather than run separately." } }
+    {
+      "@type": "Question",
+      "name": "How much does a TikTok Shop agency cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMV Forge's four services are each quoted as a monthly retainer scoped during a free audit, based on your shop's stage, catalog size, and which combination of setup, ads, content, and affiliates you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which TikTok Shop service is right for my brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet live on TikTok Shop: start with Setup & Launch. Already live and ready to scale ads: GMV Max Management. Want creator-driven organic sales: Creator & Affiliate Management. Stalled at $5-30K/month and want one team running everything: Full Management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch services as my shop grows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most brands start with Setup & Launch or GMV Max Management, then move into Full Management once they need ads, content, and affiliates coordinated together rather than run separately."
+      }
+    }
   ]
 }
 </script>
@@ -93,7 +161,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/#why">Why Us</a></li>
       <li><a href="/#reviews">Reviews</a></li>
-      <li><a href="/#portfolio">Case Studies</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/#faq">FAQ</a></li>
@@ -116,7 +184,7 @@
   <a href="/" class="mobile-link">Home</a>
   <a href="/#why" class="mobile-link">Why Us</a>
   <a href="/#reviews" class="mobile-link">Reviews</a>
-  <a href="/#portfolio" class="mobile-link">Case Studies</a>
+  <a href="/case-studies" class="mobile-link">Case Studies</a>
   <a href="/services" class="mobile-link">Services</a>
   <a href="/#pricing" class="mobile-link">Pricing</a>
   <a href="/#faq" class="mobile-link">FAQ</a>
@@ -182,7 +250,7 @@
       <ul class="footer-links">
         <li><a href="/#why">Why Us</a></li>
         <li><a href="/#reviews">Reviews</a></li>
-        <li><a href="/#portfolio">Case Studies</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
         <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/#faq">FAQ</a></li>

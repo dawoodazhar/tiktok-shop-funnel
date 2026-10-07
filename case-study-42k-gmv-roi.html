@@ -50,16 +50,7 @@
 <meta name="twitter:description" content="$42,094 GMV, up 51%, 673 orders, up 108%, in 4 weeks: full-service TikTok Shop setup, ads, and scaling.">
 <meta name="twitter:image" content="https://www.gmvforge.com/assets/img/case-42k-gmv.jpg">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": { "@type": "Service", "name": "TikTok Shop Growth Management", "provider": { "@type": "ProfessionalService", "name": "GMV Forge" } },
-  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-  "author": { "@type": "Person", "name": "Verified Client" },
-  "reviewBody": "Very knowledgeable professional with quick responses and clear communications. Went from minimal activity to consistent daily sales within the first week."
-}
-</script>
+
 
 <script type="application/ld+json">
 {
@@ -67,15 +58,57 @@
   "@type": "Article",
   "headline": "$42K GMV, 108% Order Growth in 4 Weeks: Case Study",
   "description": "How a TikTok Shop went from minimal activity to $42,094 GMV and 673 orders, up 108%, within 4 weeks of full-service setup, ads, and scaling.",
-  "author": { "@type": "Person", "name": "Dawood Azhar" },
-  "publisher": { "@type": "Organization", "name": "GMV Forge", "logo": { "@type": "ImageObject", "url": "https://www.gmvforge.com/assets/img/logo-icon.png" } },
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.gmvforge.com/about#person",
+    "name": "Dawood Azhar",
+    "url": "https://www.gmvforge.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.gmvforge.com/#organization",
+    "name": "GMV Forge",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gmvforge.com/assets/img/logo-icon.png"
+    }
+  },
   "mainEntityOfPage": "https://www.gmvforge.com/case-study-42k-gmv-roi",
   "datePublished": "2026-08-12",
-  "dateModified": "2026-08-12"
+  "dateModified": "2026-10-07",
+  "about": {
+    "@id": "https://www.gmvforge.com/service-setup-launch#service"
+  },
+  "isPartOf": {
+    "@id": "https://www.gmvforge.com/#website"
+  }
 }
 </script>
   <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gmvforge.com/" }, { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.gmvforge.com/#portfolio" }, { "@type": "ListItem", "position": 3, "name": "$42K GMV Case Study", "item": "https://www.gmvforge.com/case-study-42k-gmv-roi" } ] }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.gmvforge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Studies",
+      "item": "https://www.gmvforge.com/case-studies"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "$42K GMV Case Study",
+      "item": "https://www.gmvforge.com/case-study-42k-gmv-roi"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -88,7 +121,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/#why">Why Us</a></li>
       <li><a href="/#reviews">Reviews</a></li>
-      <li><a href="/#portfolio">Case Studies</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/#faq">FAQ</a></li>
@@ -111,7 +144,7 @@
   <a href="/" class="mobile-link">Home</a>
   <a href="/#why" class="mobile-link">Why Us</a>
   <a href="/#reviews" class="mobile-link">Reviews</a>
-  <a href="/#portfolio" class="mobile-link">Case Studies</a>
+  <a href="/case-studies" class="mobile-link">Case Studies</a>
   <a href="/services" class="mobile-link">Services</a>
   <a href="/#pricing" class="mobile-link">Pricing</a>
   <a href="/#faq" class="mobile-link">FAQ</a>
@@ -124,7 +157,7 @@
 <section class="wrap legal-page">
   <span class="eyebrow">Case Study</span>
   <h1 style="margin-top:14px;">$42K GMV, 108% Order Growth in 4 Weeks: Case Study</h1>
-  <span class="updated">4-week engagement &middot; <a href="/#portfolio">All case studies</a></span>
+  <span class="updated">By <a href="/about">Dawood Azhar</a> &middot; Published Aug 12, 2026 &middot; Updated Oct 7, 2026 &middot; 4-week engagement &middot; <a href="/case-studies">All case studies</a></span>
 
   <div class="stats-grid reveal" style="margin:24px 0 40px;">
     <div class="stat-card"><div class="stat-num">$42,094</div><div class="stat-label">GMV, up 51%</div></div>
@@ -133,7 +166,15 @@
     <div class="stat-card"><div class="stat-num">$4.97</div><div class="stat-label">Cost per order</div></div>
   </div>
 
-  <h2>The Problem</h2>
+  <h2>At a Glance</h2>
+  <ul class="case-summary">
+    <li><strong>Starting point:</strong> A shop with no verified pixel events, no meaningful ad spend, and a prior-period baseline of roughly $27,877 GMV and 324 orders.</li>
+    <li><strong>Strategy:</strong> Run shop setup, pixel verification, and launch in parallel instead of one after another.</li>
+    <li><strong>Implementation:</strong> Catalog cleanup alongside pixel installation, every event verified in Event Manager before any ad spend, and content posted in the same window before GMV Max launched.</li>
+    <li><strong>Result:</strong> Over 4 weeks: $42,094 GMV (+51%), 673 orders (+108%), and 601 unique customers.</li>
+  </ul>
+
+  <h2>Engagement Overview</h2>
   <div class="service-meta-grid reveal">
     <div class="service-meta-card"><div class="label">Scope</div><div class="value">Full-service setup, ads &amp; content</div></div>
     <div class="service-meta-card"><div class="label">Duration</div><div class="value">4 weeks</div></div>
@@ -166,9 +207,12 @@
   <h2>Why the Ramp Was Fast</h2>
   <p>Pixel verification happened before launch, not alongside it, for clean data from day one. See our <a href="/guide-pixel-setup">Pixel Setup Guide</a> and <a href="/guide-gmv-max">GMV Max guide</a>.</p>
 
+  <h2>Methodology &amp; Data Sources</h2>
+  <p>GMV, orders, items sold, and customer counts come from TikTok Shop Seller Center; ad spend and attributed revenue come from TikTok Ads Manager, for the date window stated above. The client is not named on this page. This engagement used our <a href="/service-setup-launch">Setup &amp; Launch</a> service.</p>
+
   <p style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap;"><a href="/#audit" class="btn btn-primary">Get My Free TikTok Shop Growth Audit</a><a href="/resources" class="btn btn-ghost">Browse All Guides &amp; Case Studies</a></p>
 
-  <p class="citation-note">Related case studies: <a href="/case-study-398k-gmv">$398K GMV, 9,785 Orders</a> &middot; <a href="/case-study-gmv-max-roi">9.35&times; ROI on GMV Max Ads</a><br>Guides: <a href="/guide-pixel-setup">Pixel Setup Guide</a> &middot; <a href="/guide-gmv-max">GMV Max Complete Guide</a></p>
+  <p class="citation-note">Service: <a href="/service-setup-launch">Setup &amp; Launch</a> &middot; <a href="/case-studies">All case studies</a><br>Related case studies: <a href="/case-study-398k-gmv">$398K GMV, 9,785 Orders</a> &middot; <a href="/case-study-gmv-max-roi">9.35&times; ROI on GMV Max Ads</a><br>Guides: <a href="/guide-pixel-setup">Pixel Setup Guide</a> &middot; <a href="/guide-gmv-max">GMV Max Complete Guide</a></p>
 </section>
 
 </main>
@@ -185,7 +229,7 @@
       <ul class="footer-links">
         <li><a href="/#why">Why Us</a></li>
         <li><a href="/#reviews">Reviews</a></li>
-        <li><a href="/#portfolio">Case Studies</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
         <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/#faq">FAQ</a></li>

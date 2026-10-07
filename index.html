@@ -66,10 +66,16 @@
   "name": "GMV Forge",
   "url": "https://www.gmvforge.com/",
   "logo": "https://www.gmvforge.com/assets/img/logo-icon.png",
-  "sameAs": ["https://www.linkedin.com/in/dawoodazhar/", "https://www.linkedin.com/company/anologe/", "https://www.google.com/maps?cid=14821807755695102325"],  "description": "GMV Forge sets up, manages, and scales TikTok Shops: pixel and event tracking, GMV Max ad management, and shoppable content strategy.",
+  "sameAs": [
+    "https://www.linkedin.com/company/gmvforge/",
+    "https://www.google.com/maps?cid=14821807755695102325"
+  ],
+  "description": "GMV Forge is a TikTok Shop growth and management agency based in Offenbach am Main, Germany, founded by Dawood Azhar. It sets up, manages, and scales TikTok Shops for e-commerce brands in Germany, the UK, and the US: shop setup, GMV Max ad management, and creator affiliate programs.",
   "founder": {
     "@type": "Person",
-    "name": "Dawood Azhar"
+    "@id": "https://www.gmvforge.com/about#person",
+    "name": "Dawood Azhar",
+    "url": "https://www.gmvforge.com/about"
   },
   "address": {
     "@type": "PostalAddress",
@@ -81,23 +87,48 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-      "telephone": "+49-152-1408-2385",
-      "email": "info@gmvforge.com",
-      "availableLanguage": ["English"]
-  }
+    "telephone": "+49-152-1408-2385",
+    "email": "info@gmvforge.com",
+    "availableLanguage": [
+      "English"
+    ]
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Germany"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
+  "knowsAbout": [
+    "TikTok Shop",
+    "GMV Max",
+    "TikTok Shop affiliate program",
+    "TikTok Pixel",
+    "Social commerce"
+  ]
 }
 </script>
 
   <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.gmvforge.com/#website",
-    "url": "https://www.gmvforge.com/",
-    "name": "GMV Forge",
-    "publisher": { "@id": "https://www.gmvforge.com/#organization" }
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.gmvforge.com/#website",
+  "url": "https://www.gmvforge.com/",
+  "name": "GMV Forge",
+  "publisher": {
+    "@id": "https://www.gmvforge.com/#organization"
+  }
+}
   </script>
 
 <!-- JSON-LD: FAQ -->
@@ -180,15 +211,41 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "TikTok Shop Growth Management",
-  "provider": { "@type": "ProfessionalService", "name": "GMV Forge", "url": "https://www.gmvforge.com/" },
+  "provider": {
+    "@id": "https://www.gmvforge.com/#organization"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "TikTok Shop Services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TikTok Pixel & Event Tracking Setup" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GMV Max Ad Campaign Management" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shoppable Content Strategy" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free TikTok Shop Growth Audit" } }
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "TikTok Pixel & Event Tracking Setup"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "GMV Max Ad Campaign Management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Shoppable Content Strategy"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Free TikTok Shop Growth Audit"
+        }
+      }
     ]
   }
 }
