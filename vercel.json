@@ -2,17 +2,6 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/index.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "anologe.com"
-        }
-      ],
-      "destination": "https://www.gmvforge.com/",
-      "statusCode": 301
-    },
-    {
       "source": "/ai-agents",
       "has": [
         {
@@ -57,25 +46,14 @@
       "statusCode": 301
     },
     {
-      "source": "/case-study-pixel-setup.html",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "anologe.com"
         }
       ],
-      "destination": "https://www.gmvforge.com/guide-pixel-setup",
-      "statusCode": 301
-    },
-    {
-      "source": "/:slug(.*)\\.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "anologe.com"
-        }
-      ],
-      "destination": "https://www.gmvforge.com/:slug",
+      "destination": "https://www.gmvforge.com/",
       "statusCode": 301
     },
     {
@@ -90,17 +68,6 @@
       "statusCode": 301
     },
     {
-      "source": "/index.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.anologe.com"
-        }
-      ],
-      "destination": "https://www.gmvforge.com/",
-      "statusCode": 301
-    },
-    {
       "source": "/ai-agents",
       "has": [
         {
@@ -145,25 +112,14 @@
       "statusCode": 301
     },
     {
-      "source": "/case-study-pixel-setup.html",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "www.anologe.com"
         }
       ],
-      "destination": "https://www.gmvforge.com/guide-pixel-setup",
-      "statusCode": 301
-    },
-    {
-      "source": "/:slug(.*)\\.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.anologe.com"
-        }
-      ],
-      "destination": "https://www.gmvforge.com/:slug",
+      "destination": "https://www.gmvforge.com/",
       "statusCode": 301
     },
     {
