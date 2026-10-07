@@ -46,6 +46,28 @@
       "statusCode": 301
     },
     {
+      "source": "/portfolio",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/resources",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/privacy",
+      "statusCode": 301
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -112,6 +134,28 @@
       "statusCode": 301
     },
     {
+      "source": "/portfolio",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/resources",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/privacy",
+      "statusCode": 301
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -151,6 +195,16 @@
     {
       "source": "/case-study-pixel-setup",
       "destination": "/guide-pixel-setup",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/resources",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
       "permanent": true
     }
   ]
