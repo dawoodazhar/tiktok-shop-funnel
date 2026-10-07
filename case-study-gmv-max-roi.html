@@ -50,16 +50,7 @@
 <meta name="twitter:description" content="$11,340 revenue on $1,213 ad spend, a 9.35x ROI, in 7 days: the full GMV Max campaign breakdown.">
 <meta name="twitter:image" content="https://www.gmvforge.com/assets/img/dashboard-gmv-max-ads.jpeg">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": { "@type": "Service", "name": "GMV Max Ad Campaign Management", "provider": { "@type": "ProfessionalService", "name": "GMV Forge" } },
-  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-  "author": { "@type": "Person", "name": "Verified Client" },
-  "reviewBody": "A GMV Max campaign managed by GMV Forge returned 9.35x ROI on ad spend within 7 days, driven by clean pixel data already in place before launch."
-}
-</script>
+
 
 <script type="application/ld+json">
 {
@@ -67,15 +58,57 @@
   "@type": "Article",
   "headline": "9.35x ROI on GMV Max Ads: Case Study",
   "description": "How a GMV Max campaign returned $11,340 in revenue on $1,213 of ad spend, a 9.35x ROI, in 7 days, and why clean pixel data made the difference.",
-  "author": { "@type": "Person", "name": "Dawood Azhar" },
-  "publisher": { "@type": "Organization", "name": "GMV Forge", "logo": { "@type": "ImageObject", "url": "https://www.gmvforge.com/assets/img/logo-icon.png" } },
+  "author": {
+    "@type": "Person",
+    "@id": "https://www.gmvforge.com/about#person",
+    "name": "Dawood Azhar",
+    "url": "https://www.gmvforge.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.gmvforge.com/#organization",
+    "name": "GMV Forge",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gmvforge.com/assets/img/logo-icon.png"
+    }
+  },
   "mainEntityOfPage": "https://www.gmvforge.com/case-study-gmv-max-roi",
   "datePublished": "2026-08-12",
-  "dateModified": "2026-08-12"
+  "dateModified": "2026-10-07",
+  "about": {
+    "@id": "https://www.gmvforge.com/service-gmv-max-management#service"
+  },
+  "isPartOf": {
+    "@id": "https://www.gmvforge.com/#website"
+  }
 }
 </script>
   <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gmvforge.com/" }, { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.gmvforge.com/#portfolio" }, { "@type": "ListItem", "position": 3, "name": "9.35x ROI on GMV Max Ads Case Study", "item": "https://www.gmvforge.com/case-study-gmv-max-roi" } ] }
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.gmvforge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Studies",
+      "item": "https://www.gmvforge.com/case-studies"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "9.35x ROI on GMV Max Ads Case Study",
+      "item": "https://www.gmvforge.com/case-study-gmv-max-roi"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -88,7 +121,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/#why">Why Us</a></li>
       <li><a href="/#reviews">Reviews</a></li>
-      <li><a href="/#portfolio">Case Studies</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/#faq">FAQ</a></li>
@@ -111,7 +144,7 @@
   <a href="/" class="mobile-link">Home</a>
   <a href="/#why" class="mobile-link">Why Us</a>
   <a href="/#reviews" class="mobile-link">Reviews</a>
-  <a href="/#portfolio" class="mobile-link">Case Studies</a>
+  <a href="/case-studies" class="mobile-link">Case Studies</a>
   <a href="/services" class="mobile-link">Services</a>
   <a href="/#pricing" class="mobile-link">Pricing</a>
   <a href="/#faq" class="mobile-link">FAQ</a>
@@ -124,7 +157,7 @@
 <section class="wrap legal-page">
   <span class="eyebrow">Case Study</span>
   <h1 style="margin-top:14px;">9.35&times; ROI on GMV Max Ads: Case Study</h1>
-  <span class="updated">7-day campaign window &middot; <a href="/#portfolio">All case studies</a></span>
+  <span class="updated">By <a href="/about">Dawood Azhar</a> &middot; Published Aug 12, 2026 &middot; Updated Oct 7, 2026 &middot; 7-day campaign window &middot; <a href="/case-studies">All case studies</a></span>
 
   <div class="stats-grid reveal" style="margin:24px 0 40px;">
     <div class="stat-card"><div class="stat-num">9.35&times;</div><div class="stat-label">Return on ad spend</div></div>
@@ -133,7 +166,15 @@
     <div class="stat-card"><div class="stat-num">244</div><div class="stat-label">Orders</div></div>
   </div>
 
-  <h2>The Problem</h2>
+  <h2>At a Glance</h2>
+  <ul class="case-summary">
+    <li><strong>Starting point:</strong> A shop with organic content already performing; the client wanted to validate GMV Max on a capped budget before scaling.</li>
+    <li><strong>Strategy:</strong> Verify data quality first, then build the campaign from organic videos and shop placements already converting.</li>
+    <li><strong>Implementation:</strong> Each pixel event checked in Event Manager for correct step, order value, and product data, followed by a 7-day GMV Max test.</li>
+    <li><strong>Result:</strong> $11,340.53 attributed revenue on $1,213.01 ad spend (9.35&times;), 244 orders at $4.97 cost per order, matching Seller Center order data for the same window.</li>
+  </ul>
+
+  <h2>Engagement Overview</h2>
   <div class="service-meta-grid reveal">
     <div class="service-meta-card"><div class="label">Scope</div><div class="value">GMV Max ad management only</div></div>
     <div class="service-meta-card"><div class="label">Duration</div><div class="value">7-day test window</div></div>
@@ -163,9 +204,12 @@
   <h2>Why This Result Wasn't Luck</h2>
   <p>Most GMV Max campaigns need 1-2 weeks to exit the learning phase. This account skipped it, because the data was accurate from day one.</p>
 
+  <h2>Methodology &amp; Data Sources</h2>
+  <p>GMV, orders, items sold, and customer counts come from TikTok Shop Seller Center; ad spend and attributed revenue come from TikTok Ads Manager, for the date window stated above. The client is not named on this page. This engagement used our <a href="/service-gmv-max-management">GMV Max Management</a> service.</p>
+
   <p style="margin-top:40px; display:flex; gap:12px; flex-wrap:wrap;"><a href="/#audit" class="btn btn-primary">Get My Free TikTok Shop Growth Audit</a><a href="/resources" class="btn btn-ghost">Browse All Guides &amp; Case Studies</a></p>
 
-  <p class="citation-note">Related case studies: <a href="/case-study-398k-gmv">$398K GMV, 9,785 Orders</a> &middot; <a href="/case-study-42k-gmv-roi">$42K GMV, 108% Order Growth</a><br>Guides: <a href="/guide-gmv-max">GMV Max Complete Guide</a> &middot; <a href="/guide-pixel-setup">Pixel Setup Guide</a></p>
+  <p class="citation-note">Service: <a href="/service-gmv-max-management">GMV Max Management</a> &middot; <a href="/case-studies">All case studies</a><br>Related case studies: <a href="/case-study-398k-gmv">$398K GMV, 9,785 Orders</a> &middot; <a href="/case-study-42k-gmv-roi">$42K GMV, 108% Order Growth</a><br>Guides: <a href="/guide-gmv-max">GMV Max Complete Guide</a> &middot; <a href="/guide-pixel-setup">Pixel Setup Guide</a></p>
 </section>
 
 </main>
@@ -182,7 +226,7 @@
       <ul class="footer-links">
         <li><a href="/#why">Why Us</a></li>
         <li><a href="/#reviews">Reviews</a></li>
-        <li><a href="/#portfolio">Case Studies</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
         <li><a href="/services">Services</a></li>
       <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/#faq">FAQ</a></li>

@@ -1,6 +1,6 @@
 # GMV Forge
 
-> GMV Forge is a TikTok Shop growth agency founded by Dawood Azhar, based in Frankfurt/Offenbach, Germany. It sets up, runs, and scales TikTok Shop for e-commerce brands: GMV Max ad management, shop setup and pixel/event tracking, creator and affiliate management, and full account management, for brands selling in Germany, the US, the UK, and other markets where TikTok Shop has launched.
+> GMV Forge is a TikTok Shop growth agency founded by Dawood Azhar, based in Offenbach am Main (Frankfurt Rhine-Main area), Germany. It sets up, runs, and scales TikTok Shop for e-commerce brands: GMV Max ad management, shop setup and pixel/event tracking, creator and affiliate management, and full account management, for brands selling in Germany, the US, the UK, and other markets where TikTok Shop has launched.
 
 Key facts:
 - $440,000+ in GMV managed across client accounts.
@@ -17,6 +17,7 @@ Key facts:
 - [All services overview](https://www.gmvforge.com/services)
 
 ## Case studies
+- [All case studies, with methodology](https://www.gmvforge.com/case-studies)
 - [$398K GMV, 9,785 Orders](https://www.gmvforge.com/case-study-398k-gmv)
 - [$42K GMV, 108% Order Growth](https://www.gmvforge.com/case-study-42k-gmv-roi)
 - [9.35x ROI on GMV Max Ads](https://www.gmvforge.com/case-study-gmv-max-roi)
@@ -30,6 +31,7 @@ Key facts:
 - [TikTok Shop in Germany](https://www.gmvforge.com/guide-tiktok-shop-germany)
 
 ## Company
+- LinkedIn: https://www.linkedin.com/company/gmvforge/
 - [About Dawood Azhar, founder](https://www.gmvforge.com/about)
 - [TikTok Shop agency for Germany](https://www.gmvforge.com/tiktok-shop-agency-germany)
 - [TikTok Shop agency for the UK](https://www.gmvforge.com/tiktok-shop-agency-uk)

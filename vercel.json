@@ -53,7 +53,7 @@
           "value": "anologe.com"
         }
       ],
-      "destination": "https://www.gmvforge.com/resources",
+      "destination": "https://www.gmvforge.com/case-studies",
       "statusCode": 301
     },
     {
@@ -141,7 +141,7 @@
           "value": "www.anologe.com"
         }
       ],
-      "destination": "https://www.gmvforge.com/resources",
+      "destination": "https://www.gmvforge.com/case-studies",
       "statusCode": 301
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "source": "/portfolio",
-      "destination": "/resources",
+      "destination": "/case-studies",
       "permanent": true
     },
     {
