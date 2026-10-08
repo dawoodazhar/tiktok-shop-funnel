@@ -68,6 +68,72 @@
       "statusCode": 301
     },
     {
+      "source": "/about-us",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/about",
+      "statusCode": 301
+    },
+    {
+      "source": "/about-us/",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/about",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-conditions",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/terms",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-conditions/",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/terms",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy/",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/privacy",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/",
+      "has": [
+        {
+          "type": "host",
+          "value": "anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/case-studies",
+      "statusCode": 301
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -156,6 +222,72 @@
       "statusCode": 301
     },
     {
+      "source": "/about-us",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/about",
+      "statusCode": 301
+    },
+    {
+      "source": "/about-us/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/about",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-conditions",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/terms",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-conditions/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/terms",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/privacy",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.anologe.com"
+        }
+      ],
+      "destination": "https://www.gmvforge.com/case-studies",
+      "statusCode": 301
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -205,6 +337,36 @@
     {
       "source": "/privacy-policy",
       "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/terms-conditions",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/case-studies",
       "permanent": true
     }
   ]
