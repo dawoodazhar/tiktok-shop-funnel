@@ -64,19 +64,20 @@ Statuses: Pending · In Progress · Blocked · Completed
 | CRO audit | Completed | Workbook › CRO |
 | Growth dashboard | Completed | GMV_Forge_Growth_Workbook.xlsx › Dashboard |
 | TikTok Shop Partner Center application | Blocked | Needs your account at partner.tiktokshop.com |
-| German pricing page (/de/tiktok-shop-agentur-kosten) | In Progress (built, not deployed) | 645 words, DE, hreflang ↔ /tiktok-shop-agency-pricing, WebPage+FAQ schema; local checks pass. Awaiting GitHub push |
-| German fee calculator (/de/tiktok-shop-gebuehren-rechner) | In Progress (built, not deployed) | 462 words, DE, hreflang ↔ EN calculator, WebApplication+FAQ schema; JS syntax checked (node). Awaiting GitHub push |
-| Germany seller checklist | In Progress (built, not deployed) | 12-step checklist added to /guide-tiktok-shop-germany (EN) and /de/tiktok-shop-deutschland (DE). Awaiting GitHub push |
-| Cross-links, sitemap (29 URLs), llms.txt for new DE pages | In Progress (built, not deployed) | Internal links valid, JSON-LD valid, sitemap XML valid |
-| Sortlist profile completeness (41%) | Blocked | Only possible in the Sortlist web dashboard (no API); browser use disabled by user. Needs your OK to use the browser, or you edit it |
+| German pricing page (/de/tiktok-shop-agentur-kosten) | Completed | Commit dae67a6; live 200, canonical OK; indexing requested 2026-10-10 |
+| German fee calculator (/de/tiktok-shop-gebuehren-rechner) | Completed | Commit dae67a6; live 200, canonical OK; indexing requested 2026-10-10 |
+| Germany seller checklist | Completed | Commits dae67a6 (DE) + 3e3df12 (EN guide); live |
+| Cross-links, sitemap (29 URLs), llms.txt for new DE pages | Completed | Commit 3e3df12; live sitemap = 29 URLs; resubmitted in GSC 2026-10-10 (Success) |
+| Sortlist profile completeness (41%) | Blocked | Remaining sections (portfolio, team members, client logos) need real assets/details from you: portfolio images + client names you may publish, team member names/photos |
 | Ahrefs/Semrush data | Blocked | Connector needs authorization |
 
-## Prepared change set (2026-10-10)
-Local files: outputs/pr-de2/ (9 files + changes.patch). Base commit: cd88156 (= current production, Vercel dpl_CTZrZPBuYpD864yNfbcT6yCFtWiU READY).
-Files: de/tiktok-shop-agentur-kosten.html (new), de/tiktok-shop-gebuehren-rechner.html (new), de/tiktok-shop-agentur.html, de/tiktok-shop-deutschland.html, guide-tiktok-shop-germany.html, tiktok-shop-agency-pricing.html, tiktok-shop-germany-fee-calculator.html, sitemap.xml, llms.txt.
-After push: Vercel auto-deploys from main → verify 200/canonical/hreflang/schema on the 2 new URLs, resubmit sitemap, request indexing, then mark Completed.
+## Deploy log
+- 2026-10-10: dae67a6 + 3e3df12 pushed to main (GitHub web upload); Vercel auto-deployed; verified live via fetch.
 
 ## Connections (2026-10-10)
-- Vercel: Connected ✔ (read deployments OK).
-- GitHub: Blocked. GitHub connector failed: "Authorization header is badly formatted". Reconnect the GitHub connector, then I commit + push this change set and PROJECT_STATUS.md.
-- Browser: disabled by user rule.
+- Vercel: MCP returns 403 for team scope muhammad-hammads-projects-ac1047dd (re-auth needed to read deployments). Deploys still work via Git integration.
+- GitHub: connector fails ("Authorization header is badly formatted"); commits done via GitHub web upload in browser.
+
+## Next
+- 2026-10-15: re-check indexing (GSC) for requested URLs.
+- Your actions: FormSubmit test/activation; Private Email purchase decision; outreach approval; Partner Center application; Sortlist assets.
