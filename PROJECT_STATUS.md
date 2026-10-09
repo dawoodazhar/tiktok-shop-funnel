@@ -13,7 +13,7 @@ Statuses: Pending · In Progress · Blocked · Completed
 | Redirect legacy anologe URLs (/portfolio, /privacy-policy, /about-us, /terms-conditions) | Completed | Commits 2026-10-08; verified final URLs |
 | Keep anologe.com registered | Completed | Namecheap: active to 2027-05-04 |
 | info@gmvforge.com receives mail | Completed | Namecheap forward info@ → info@anologe.com; MX eforward verified |
-| info@gmvforge.com sendable mailbox (Private Email) | Blocked | No gmvforge.com plan in Namecheap; needs purchase approval ($14.88/yr Launch) |
+| info@gmvforge.com sendable mailbox (Private Email) | Completed (cancelled) | User decision: keep info@anologe.com, no paid mailbox; info@gmvforge.com stays a free forward |
 
 ## Search Console / analytics
 | Task | Status | Evidence / notes |
@@ -25,7 +25,7 @@ Statuses: Pending · In Progress · Blocked · Completed
 | Re-check indexing of requested URLs | Pending | Due ~2026-10-15 (baseline: 2 indexed) |
 | GA4 lead + booking tracking | Completed | thank-you.html: generate_lead, book_call |
 | Mark GA4 key events | Blocked | GA4 allows starring only after first event fires |
-| Activate FormSubmit / test lead form | Blocked | Needs test submission + activation click in info@anologe.com (your approval) |
+| Activate FormSubmit / test lead form | Completed | Activated by user 2026-10-10 |
 
 ## Brand / entity
 | Task | Status | Evidence / notes |
@@ -57,19 +57,25 @@ Statuses: Pending · In Progress · Blocked · Completed
 | Keyword/SERP research (15 queries EN/DE) | Completed | Workbook › SERP Research |
 | Competitor gap analysis (10) | Completed | Workbook › Competitors |
 | PR/backlink prospects + drafts | Completed | Workbook › PR Prospects (17), Outreach Drafts (4) |
-| Send outreach | Blocked | Needs your approval (sent under your name) |
+| Send outreach | In Progress | Approved 2026-10-10. Sent: Amplisell (hello@amplisell.com), Playful Media (kontakt@playfulmedia.de). Remaining prospects use contact forms (AWISEE, Hubfluence, inBeat, Hamster Garage, ValueYourNetwork, Onlinehändler News, ChannelX, OnlineMarketing.de, t3n, Kassenzone, ecommerceguide) |
 | Review acquisition workflow | Completed | Workbook › Reviews Workflow |
 | Linkable asset plan | Completed | Workbook › Linkable Assets |
 | AI visibility tests | In Progress | 6 run (0 mentions); ChatGPT/Gemini/Perplexity need login |
 | CRO audit | Completed | Workbook › CRO |
 | Growth dashboard | Completed | GMV_Forge_Growth_Workbook.xlsx › Dashboard |
-| TikTok Shop Partner Center application | Blocked | Needs your account at partner.tiktokshop.com |
+| TikTok Shop Partner Center application | Blocked | Account exists (ID 7494962862122435877). Application needs a company registration certificate; user has no registered business (only a freelance tax ID). Not submitted. Revisit after a Gewerbeanmeldung or company registration |
 | German pricing page (/de/tiktok-shop-agentur-kosten) | Completed | Commit dae67a6; live 200, canonical OK; indexing requested 2026-10-10 |
 | German fee calculator (/de/tiktok-shop-gebuehren-rechner) | Completed | Commit dae67a6; live 200, canonical OK; indexing requested 2026-10-10 |
 | Germany seller checklist | Completed | Commits dae67a6 (DE) + 3e3df12 (EN guide); live |
 | Cross-links, sitemap (29 URLs), llms.txt for new DE pages | Completed | Commit 3e3df12; live sitemap = 29 URLs; resubmitted in GSC 2026-10-10 (Success) |
-| Sortlist profile completeness (41%) | Blocked | Remaining sections (portfolio, team members, client logos) need real assets/details from you: portfolio images + client names you may publish, team member names/photos |
-| Ahrefs/Semrush data | Blocked | Connector needs authorization |
+
+| SEO data source | Completed | OpenSEO (DataForSEO) connected, project a8878658; 500 free credits (~240 left) |
+| Real keyword data DE/US | Completed | 2026-10-10: 'tiktok shop deutschland' 1,900/mo KD3; 'tiktok agentur' 390 KD0; 'tiktok shop affiliate' 320; 'tiktok shop agency' 590 (US); 'gmv max' 590 (US); 'tiktok shop partner' 480; 'tiktok shop fees' 320 |
+| DE SERP competitors | Completed | xentral.com, speekly.de, e-recht24.de, pandotax.de, okeano.de (content sites, not agencies) |
+| Backlink audit | Completed | gmvforge.com: 1 referring domain. anologe.com: ~855 ref. domains, ~800 are a spam-directory attack since Sep 2026. disavow-gmvforge.txt (200 domains) prepared |
+| Site audit (OpenSEO, 32 pages) | Completed | 0 critical/warnings; info only: 16 long titles, 7 long meta descriptions, 3 heading skips |
+| Rank tracker (DE mobile) | Pending | Tracker e1fcb552 created (manual); run after indexing (90 credits/run) |
+| Sortlist profile completeness | Completed (skipped) | User has no portfolio assets now |
 
 ## Deploy log
 - 2026-10-10: dae67a6 + 3e3df12 pushed to main (GitHub web upload); Vercel auto-deployed; verified live via fetch.
