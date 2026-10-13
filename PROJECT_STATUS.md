@@ -74,6 +74,11 @@ Statuses: Pending · In Progress · Blocked · Completed
 | DE SERP competitors | Completed | xentral.com, speekly.de, e-recht24.de, pandotax.de, okeano.de (content sites, not agencies) |
 | Backlink audit | Completed | gmvforge.com: 1 referring domain. anologe.com: ~855 ref. domains, ~800 are a spam-directory attack since Sep 2026. disavow-gmvforge.txt (200 domains) prepared |
 | Site audit (OpenSEO, 32 pages) | Completed | 0 critical/warnings; info only: 16 long titles, 7 long meta descriptions, 3 heading skips |
+| Title/meta fixes + DE keyword retargeting | Completed | Commits 0275dd3, d0ab35d (2026-10-10) |
+| New pages: /de/tiktok-shop-affiliate, /tiktok-shop-fees-calculator (US), /tiktok-shop-partner-vs-agency; homepage H1 "TikTok Shop Agency"; sitemap 32 URLs | Completed | Committed 2026-10-11, live 200 + canonical verified, sitemap resubmitted, indexing requested for all 3 |
+| Internal linking pass | Completed | Commits f157994, 0a9119d: links to weak pages (services, UK, Europe, US calculator, TSP guide, DE affiliate) from 12 pages; descriptive DE anchors |
+| AI visibility paid check (OpenSEO) | Blocked | 5 prompts × 3 engines = 320 credits; ~240 left. Needs credit top-up or fewer prompts |
+| GitHub connector | Completed | Working (read OK); large multi-file commits still via web upload to save tokens |
 | Rank tracker (DE mobile) | Pending | Tracker e1fcb552 created (manual); run after indexing (90 credits/run) |
 | Sortlist profile completeness | Completed (skipped) | User has no portfolio assets now |
 
