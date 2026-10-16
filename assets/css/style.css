@@ -1271,3 +1271,9 @@ a:focus-visible, button:focus-visible{
   margin-bottom:4px;
 }
 .form-back:hover{ color:var(--text); }
+
+/* Brand logo: white mark on dark theme, black mark on light theme */
+img.logo-on-light{ display:none; }
+[data-theme="light"] img.logo-on-dark{ display:none; }
+[data-theme="light"] img.logo-on-light{ display:inline-block; }
+.logo img{ height:24px; width:auto; }
