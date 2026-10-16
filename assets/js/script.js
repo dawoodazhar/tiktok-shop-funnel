@@ -205,5 +205,30 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('gmvforge_lead_name', name);
       localStorage.setItem('gmvforge_lead_email', email);
     } catch (e) {}
+    // Copy the lead into HubSpot CRM (free) so every lead lands in one pipeline.
+    try {
+      const fd = new FormData(form);
+      const get = (k) => (fd.get(k) || '').toString().trim();
+      const fullName = get('Name');
+      const parts = fullName.split(/\s+/);
+      const lines = [];
+      fd.forEach((v, k) => { if (k.charAt(0) !== '_' && !['Name', 'Email'].includes(k) && String(v).trim()) lines.push(k + ': ' + v); });
+      const phoneKey = Array.from(fd.keys()).find((k) => /phone/i.test(k));
+      const fields = [
+        { name: 'email', value: get('Email') },
+        { name: 'firstname', value: parts.shift() || '' },
+        { name: 'lastname', value: parts.join(' ') },
+        { name: 'message', value: lines.join('\n') }
+      ];
+      if (phoneKey && get(phoneKey)) fields.push({ name: 'phone', value: get(phoneKey) });
+      if (get('Email') && !get('_honey')) {
+        fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/149567161/12031075-0dae-4753-ab35-6cd0f9abb42d', {
+          method: 'POST',
+          keepalive: true,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fields: fields, context: { pageUri: location.href, pageName: document.title } })
+        }).catch(() => {});
+      }
+    } catch (e) {}
   });
 });
