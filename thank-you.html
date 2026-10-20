@@ -111,7 +111,7 @@
   (function(){
     if (typeof gtag !== 'function') return;
     try{
-      if (document.referrer.indexOf('gmvforge.com') !== -1 || document.referrer.indexOf('formsubmit.co') !== -1) {
+      if (document.referrer.indexOf('gmvforge.com') !== -1) {
         gtag('event', 'generate_lead', { lead_source: 'audit_form' });
       }
     }catch(e){}
