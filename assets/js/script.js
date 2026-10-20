@@ -197,38 +197,41 @@ document.addEventListener('DOMContentLoaded', () => {
   if (continueBtn) continueBtn.addEventListener('click', goToStep2);
   if (backBtn) backBtn.addEventListener('click', goToStep1);
 
-  // Hand off name + email to the Calendly booking step on the thank-you page.
-  form.addEventListener('submit', () => {
+  // Lead capture: HubSpot Forms API only (no third-party mailer, no ads in emails).
+  const startedAt = Date.now();
+  form.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const fd = new FormData(form);
+    const get = (k) => (fd.get(k) || '').toString().trim();
+    // Basic bot filters: hidden honeypot, too-fast submits, junk names.
+    const fullName = get('Name');
+    const isBot = get('_honey') || (Date.now() - startedAt) < 4000 || !/^[\p{L}][\p{L} .'-]{1,60}$/u.test(fullName) || /[A-Z]{8,}/.test(fullName.replace(/\s/g, ''));
+    const done = () => { window.location.href = '/thank-you'; };
     try {
-      const name = form.querySelector('#f-name')?.value || '';
-      const email = form.querySelector('#f-email')?.value || '';
-      localStorage.setItem('gmvforge_lead_name', name);
-      localStorage.setItem('gmvforge_lead_email', email);
+      localStorage.setItem('gmvforge_lead_name', fullName);
+      localStorage.setItem('gmvforge_lead_email', get('Email'));
     } catch (e) {}
-    // Copy the lead into HubSpot CRM (free) so every lead lands in one pipeline.
-    try {
-      const fd = new FormData(form);
-      const get = (k) => (fd.get(k) || '').toString().trim();
-      const fullName = get('Name');
-      const parts = fullName.split(/\s+/);
-      const lines = [];
-      fd.forEach((v, k) => { if (k.charAt(0) !== '_' && !['Name', 'Email'].includes(k) && String(v).trim()) lines.push(k + ': ' + v); });
-      const phoneKey = Array.from(fd.keys()).find((k) => /phone/i.test(k));
-      const fields = [
-        { name: 'email', value: get('Email') },
-        { name: 'firstname', value: parts.shift() || '' },
-        { name: 'lastname', value: parts.join(' ') },
-        { name: 'message', value: lines.join('\n') }
-      ];
-      if (phoneKey && get(phoneKey)) fields.push({ name: 'phone', value: get(phoneKey) });
-      if (get('Email') && !get('_honey')) {
-        fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/149567161/12031075-0dae-4753-ab35-6cd0f9abb42d', {
-          method: 'POST',
-          keepalive: true,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fields: fields, context: { pageUri: location.href, pageName: document.title } })
-        }).catch(() => {});
-      }
-    } catch (e) {}
+    if (isBot) { done(); return; }
+    const parts = fullName.split(/\s+/);
+    const lines = [];
+    fd.forEach((v, k) => { if (k.charAt(0) !== '_' && !['Name', 'Email'].includes(k) && String(v).trim()) lines.push(k + ': ' + v); });
+    const phoneKey = Array.from(fd.keys()).find((k) => /phone/i.test(k));
+    const fields = [
+      { name: 'email', value: get('Email') },
+      { name: 'firstname', value: parts.shift() || '' },
+      { name: 'lastname', value: parts.join(' ') },
+      { name: 'message', value: lines.join('\n') }
+    ];
+    if (phoneKey && get(phoneKey)) fields.push({ name: 'phone', value: get(phoneKey) });
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/149567161/12031075-0dae-4753-ab35-6cd0f9abb42d', {
+      method: 'POST',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fields: fields, context: { pageUri: location.href, pageName: document.title } })
+    }).then(done, done);
+    setTimeout(done, 4000);
   });
 });
