@@ -75,7 +75,7 @@
   },
   "inLanguage": "en",
   "datePublished": "2026-10-07",
-  "dateModified": "2026-10-07",
+  "dateModified": "2026-10-24",
   "image": "https://www.gmvforge.com/assets/img/og-cover.jpg"
 }
 </script>
@@ -110,6 +110,22 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why did my GMV Max campaign suddenly stop spending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check what changed in the last few days: a higher ROI target, a paused or out-of-stock best seller, a price change, or the same few videos running for weeks. Undo recent ROI changes, restock or re-add top products, and add fresh product-linked videos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is GMV Max spending but not converting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually the products in the campaign are weak sellers, the videos don't show the product clearly, or tracking reports wrong values. Remove products with no organic sales, add videos that demo the product in the first seconds, and verify pixel events and prices."
+      }
+    },
     {
       "@type": "Question",
       "name": "Why is my GMV Max campaign not spending?",
@@ -192,22 +208,36 @@
 <section class="wrap legal-page">
   <span class="eyebrow">Guide</span>
   <h1 style="margin-top:14px;">GMV Max Not Spending or Low ROI: How to Fix It</h1>
-  <span class="updated">By <a href="/about">GMV Forge Team</a> &middot; Published Oct 7, 2026 &middot; <a href="/resources">All guides</a></span>
+  <span class="updated">By <a href="/about">GMV Forge Team</a> &middot; Published Oct 7, 2026 &middot; Updated Oct 24, 2026 &middot; <a href="/resources">All guides</a></span>
 
   <div style="border-left:2px solid var(--cyan); padding-left:16px; margin:8px 0 28px;">
   <p><strong>Short answer:</strong> GMV Max usually under-spends because the ROI target is too high, the budget is too low, or there aren't enough product-linked videos. Low ROI usually comes from weak products in the campaign, stale creative, or tracking and catalog data the algorithm can't trust. Fix data first, then targets, then creative supply.</p>
   </div>
 
-  <h2>1. Is your ROI target too high?</h2>
+  <h2>Find your problem fast</h2>
+  <table style="width:100%;border-collapse:collapse;margin:8px 0 24px;font-size:15px;">
+    <tr><th style="text-align:left;border-bottom:1px solid var(--border,#333);padding:8px;">What you see</th><th style="text-align:left;border-bottom:1px solid var(--border,#333);padding:8px;">Most likely cause</th><th style="text-align:left;border-bottom:1px solid var(--border,#333);padding:8px;">Go to</th></tr>
+    <tr><td style="padding:8px;">Spend near $0 from day one</td><td style="padding:8px;">ROI target too high</td><td style="padding:8px;"><a href="#roi">Fix 1</a></td></tr>
+    <tr><td style="padding:8px;">Spends the full budget every day, then stops</td><td style="padding:8px;">Budget is capping delivery</td><td style="padding:8px;"><a href="#budget">Fix 2</a></td></tr>
+    <tr><td style="padding:8px;">Was spending, suddenly stopped</td><td style="padding:8px;">Recent ROI change, fatigued videos or a product issue</td><td style="padding:8px;"><a href="#changes">Fix 3</a>, <a href="#videos">Fix 4</a></td></tr>
+    <tr><td style="padding:8px;">Spends, but ROI is low</td><td style="padding:8px;">Weak products in the mix or untrusted tracking data</td><td style="padding:8px;"><a href="#products">Fix 5</a>, <a href="#data">Fix 6</a></td></tr>
+    <tr><td style="padding:8px;">First 2&ndash;3 days look bad</td><td style="padding:8px;">Still learning</td><td style="padding:8px;"><a href="#early">Fix 7</a></td></tr>
+  </table>
+
+  <h2 id="roi">1. Is your ROI target too high?</h2>
   <p>This is the most common reason a campaign won't spend. A higher ROI target tells GMV Max to only buy traffic it expects to be very profitable, so it holds back. TikTok's guidance is to start from <strong>historical non-LIVE GMV &divide; historical ad cost</strong>, or the system's recommended ROI if you have no history, and to set a slightly lower target if you want more delivery.</p>
+  <p><strong>Example:</strong> over the last 30 days your shop made $6,000 in non-LIVE GMV from $1,500 in ad cost. That is an ROI of 4.0. If your campaign is set to 6.0 and barely spends, try 3.6&ndash;3.8 (slightly below history), then wait three days before judging it.</p>
 
-  <h2>2. Is the budget large enough?</h2>
+
+  <h2 id="budget">2. Is the budget large enough?</h2>
   <p>TikTok suggests a budget of about <strong>2 &times; historical non-LIVE GMV &divide; ROI target</strong>, keeping daily consumption below 80% of budget and raising it when performance improves. A budget that is fully used every day is capping the campaign.</p>
+  <p><strong>Example:</strong> with $6,000 historical non-LIVE GMV and an ROI target of 4.0, the suggested budget is about 2 &times; 6,000 &divide; 4 = $3,000 for the period, so around $100 a day over 30 days.</p>
 
-  <h2>3. Are you changing settings too often?</h2>
+
+  <h2 id="changes">3. Are you changing settings too often?</h2>
   <p>GMV Max optimizes ROI daily. Changing the target every day restarts learning. Keep each ROI setting for <strong>at least three full days</strong> before adjusting.</p>
 
-  <h2>4. Does the campaign have enough videos?</h2>
+  <h2 id="videos">4. Does the campaign have enough videos?</h2>
   <p>GMV Max builds ads from the videos linked to your products. Few videos means few chances to find winners, and the same few videos fatigue quickly. TikTok recommends:</p>
   <ul>
     <li>using <strong>Auto-select videos</strong> so all existing and future videos are explored;</li>
@@ -216,13 +246,13 @@
   </ul>
   <p>This is where a creator program pays off. See our <a href="/service-creator-affiliate-management">creator &amp; affiliate management service</a>.</p>
 
-  <h2>5. Are the right products in the campaign?</h2>
+  <h2 id="products">5. Are the right products in the campaign?</h2>
   <p>TikTok recommends broad product inclusion and prioritizing products that already sell well, since gains on small products can disappear in normal daily fluctuation. If ROI is low, check whether a few weak products are pulling the average down.</p>
 
-  <h2>6. Can the algorithm trust your data?</h2>
+  <h2 id="data">6. Can the algorithm trust your data?</h2>
   <p>In our accounts, the campaigns that skip a slow start are the ones where tracking was verified first. Check every pixel event in Event Manager for the right step, order value and product data, and make sure listing prices match checkout. In one client shop, listings where the reported price didn't match checkout were quietly suppressed in shop-tab recommendations until fixed (<a href="/case-study-398k-gmv">case study</a>). See the <a href="/guide-pixel-setup">pixel setup guide</a>.</p>
 
-  <h2>7. Are you judging it too early?</h2>
+  <h2 id="early">7. Are you judging it too early?</h2>
   <p>A new campaign needs time and data. Look at total shop GMV, not just attributed ad revenue, because GMV Max also affects organic delivery. In our <a href="/case-study-gmv-max-roi">7-day GMV Max test</a>, clean data from day one produced a 9.35&times; ROI that matched Seller Center order data.</p>
 
   <h2>Quick checklist</h2>
@@ -236,6 +266,10 @@
   </ul>
 
   <h2>FAQ</h2>
+  <h3>Why did my GMV Max campaign suddenly stop spending?</h3>
+  <p>Check what changed in the last few days: a higher ROI target, a paused or out-of-stock best seller, a price change, or the same few videos running for weeks. Undo recent ROI changes, restock or re-add top products, and add fresh product-linked videos.</p>
+  <h3>Why is GMV Max spending but not converting?</h3>
+  <p>Usually the products in the campaign are weak sellers, the videos don't show the product clearly, or tracking reports wrong values. Remove products with no organic sales, add videos that demo the product in the first seconds, and verify pixel events and prices.</p>
   <h3>Why is my GMV Max campaign not spending?</h3>
   <p>Most often the ROI target is set higher than your products can deliver, the budget is too small, or there are too few product-linked videos for the campaign to use. Lowering the ROI target toward the system recommendation is usually the first fix.</p>
   <h3>How do I set the right ROI target for GMV Max?</h3>
