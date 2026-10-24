@@ -1,3 +1,4 @@
+(function(){try{if(!sessionStorage.getItem('gf_src')){sessionStorage.setItem('gf_src',(document.referrer||'direct')+' -> '+location.pathname+location.search);}}catch(e){}})();
 // ============================================================
 // GMV Forge — TikTok Shop funnel interactions
 // ============================================================
@@ -216,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parts = fullName.split(/\s+/);
     const lines = [];
     fd.forEach((v, k) => { if (k.charAt(0) !== '_' && !['Name', 'Email'].includes(k) && String(v).trim()) lines.push(k + ': ' + v); });
+    try { const src = sessionStorage.getItem('gf_src'); if (src) lines.push('First visit source: ' + src); } catch (e) {}
     const phoneKey = Array.from(fd.keys()).find((k) => /phone/i.test(k));
     const fields = [
       { name: 'email', value: get('Email') },
